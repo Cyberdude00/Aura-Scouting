@@ -100,7 +100,7 @@ nav a:focus {
 /* ======================== HOME ======================== */
 #home {
   height: 100vh;
-  background: url("./Images/aura-scouting-america.webp") center/cover no-repeat;
+  background: url("./images/aura-scouting-america.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
