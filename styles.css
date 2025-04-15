@@ -1,0 +1,310 @@
+/* Smooth scroll en toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ======================== VARIABLES ======================== */
+:root {
+  --font-main: "IBM Plex Mono", monospace;
+  --color-bg: #fff;
+  --color-dark: #171616;
+  --color-light: #f9f9f9;
+  --color-accent: #ff0000;
+}
+
+/* ======================== RESET ======================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ======================== GLOBAL SECTIONS ======================== */
+.section-with-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  min-height: 100vh;
+  padding: 20px; /* Asegura que el contenido no quede demasiado cerca de los bordes */
+}
+
+.section-with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-text-wrapper,
+#about,
+#gallery,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* ======================== NAVIGATION ======================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--color-dark);
+  padding: 10px 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 7%;
+}
+
+nav ul li a {
+  color: var(--color-accent);
+  font-weight: normal;
+  transition: color 0.3s ease; /* Suavizar el cambio de color */
+}
+
+nav ul li a:hover {
+  color: #fff; /* Cambiar el color al pasar el ratón */
+}
+
+nav a:focus {
+  outline: 3px solid var(--color-accent); /* Destacar enlaces con un borde cuando están en foco */
+  outline-offset: 2px;
+}
+
+/* ======================== HOME ======================== */
+#home {
+  height: 100vh;
+  background: url("./Images/aura-scouting-america.webp") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-image {
+  width: clamp(250px, 45vw, 500px);
+  animation: fadeIn 2s ease forwards;
+}
+
+.home-text {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  margin-top: 30px;
+  animation: fadeIn 3s ease forwards;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* ======================== ANIMATIONS ======================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================== ABOUT ======================== */
+#about {
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ======================== GALLERY ======================== */
+#gallery {
+  padding: 60px 20px;
+  background-color: var(--color-bg);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizar la transición */
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra al hacer hover */
+}
+
+/* ======================== CONDITIONS ======================== */
+#conditions {
+  padding: 20px;
+  background-color: var(--color-light);
+}
+
+.conditions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.conditions-box {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.conditions-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.conditions-text {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Sección de condiciones */
+#conditions {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.conditions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conditions-box {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.conditions-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.conditions-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.conditions-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  text-align: left;
+}
+
+.conditions-text a {
+  color: #000;
+  text-decoration: none;
+}
+
+.conditions-text a:hover {
+  text-decoration: underline;
+}
+
+#contact {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact .contact-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#contact h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  color: #fff;
+}
+
+/* ======================== FOOTER ======================== */
+footer {
+  background-color: var(--color-dark);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  position: relative;
+}

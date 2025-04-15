@@ -1,0 +1,13 @@
+# Last Updated: April 4, 2025
+# Aura Scouting
+
+# Allow all robots to crawl the entire site
+User-agent: *
+Allow: /
+
+# Allow Naver's Yeti bot
+User-agent: Yeti
+Allow: /
+
+# Specify the location of the Sitemap
+Sitemap: https://aurascouting.com/sitemap.xml
