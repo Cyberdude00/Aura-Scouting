@@ -100,7 +100,7 @@ nav a:focus {
 /* ======================== HOME ======================== */
 #home {
   height: 100vh;
-  background: url("./images/aura-scouting-america.jpg") center/cover no-repeat;
+  background: url("./images/aura-scouting-america.webp") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -310,9 +310,9 @@ footer {
 }
 
 @media (max-width: 480px) {
-
   /* ======================== Adjustments for phones ======================== */
-  body #services div, body #how div {
-    padding: 10px
+  body #services div,
+  body #how div {
+    padding: 10px;
   }
 }
