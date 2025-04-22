@@ -70,6 +70,7 @@ nav {
   padding: 10px 0;
   z-index: 1000;
   transition: background-color 0.3s ease; /* Efecto de transición */
+  color: var(--color-accent);
 }
 
 nav ul {
@@ -79,11 +80,10 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 7%;
+  margin: 0 5%;
 }
 
 nav ul li a {
-  color: var(--color-accent);
   font-weight: normal;
   transition: color 0.3s ease; /* Suavizar el cambio de color */
 }
@@ -97,8 +97,8 @@ nav a:focus {
   outline-offset: 2px;
 }
 
-/* ======================== HOME ======================== */
-#home {
+/* ======================== Our name ======================== */
+#our-name {
   height: 100vh;
   background: url("./images/aura-scouting-america.webp") center/cover no-repeat;
   display: flex;
@@ -112,12 +112,12 @@ nav a:focus {
   z-index: 2;
 }
 
-.logo-image {
-  width: clamp(250px, 45vw, 500px);
+#our-name-logo {
+  width: clamp(400px, 70dvw, 1000px);
   animation: fadeIn 2s ease forwards;
 }
 
-.home-text {
+#our-name-text {
   font-size: clamp(1.2rem, 2.5vw, 2rem);
   margin-top: 30px;
   animation: fadeIn 3s ease forwards;
@@ -125,7 +125,6 @@ nav a:focus {
   line-height: 1.6;
 }
 
-/* ======================== ANIMATIONS ======================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -140,6 +139,9 @@ nav a:focus {
 /* ======================== ABOUT ======================== */
 #about {
   background-color: var(--color-light);
+  background-image: url('images/aura-scouting-europa.webp');
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,134 +150,101 @@ nav a:focus {
   padding: 20px;
 }
 
-.about-text {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+#about .big {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 20px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+}
+
+#about .big .small {
+  flex: 1 1 300px;
   max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.8
 }
 
-/* ======================== GALLERY ======================== */
-#gallery {
-  padding: 60px 20px;
-  background-color: var(--color-bg);
-}
+/* ======================== Services ======================== */
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizar la transición */
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra al hacer hover */
-}
-
-/* ======================== CONDITIONS ======================== */
-#conditions {
-  padding: 20px;
-  background-color: var(--color-light);
-}
-
-.conditions-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.conditions-box {
-  flex: 1 1 300px;
-  text-align: center;
-}
-
-.conditions-image {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.conditions-text {
-  margin-top: 30px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Sección de condiciones */
-#conditions {
+#services {
   background-color: #f9f9f9;
-  padding: 60px 20px;
-}
-
-.conditions-container {
+  padding: 80px 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.conditions-box {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+#services .image-frame {
+  flex: 1 1 300px;
+  text-align: center;
+  width: 500px;
+}
+
+#services .image-frame .services-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#services .text-frame {
+  flex: 1 1 300px;
+  max-width: 550px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ======================== How ======================== */
+
+#how {
+  background-color: #fff;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+}
+
+#how .image-frame {
+  flex: 1 1 300px;
   text-align: center;
 }
 
-.conditions-image {
+#how .image-frame .how-image {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-.conditions-box h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+#how .text-frame {
+  flex: 1 1 300px;
+  max-width: 550px;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-.conditions-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 400px;
-  text-align: left;
+/* ======================== Why ======================== */
+
+#why {
+  background-image: url('images/aura-scouting-argentina.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-.conditions-text a {
-  color: #000;
-  text-decoration: none;
+#why .frame {
+  background-color: rgba(0,0,0,0.6);
+  padding: 40px;
+  line-height: 1.8;
+  max-width: 900px;
 }
 
-.conditions-text a:hover {
-  text-decoration: underline;
-}
-
+/* ======================== Contact ======================== */
 #contact {
   background-color: var(--color-dark);
   color: white;
-  padding: 60px 20px;
+  padding-top: 40px;
   text-align: center;
-}
-
-#contact .contact-container {
-  max-width: 1200px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #contact h2 {
@@ -283,19 +252,20 @@ nav a:focus {
   margin-bottom: 20px;
 }
 
-#contact p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 10px 0;
+#contact h3 {
+  margin-top: 15px;
 }
 
-.contact-info a {
+#contact a {
   color: var(--color-accent);
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 5px 5px;
 }
 
-.contact-info a:hover {
+#contact a:hover {
   color: #fff;
 }
 
@@ -304,7 +274,7 @@ footer {
   background-color: var(--color-dark);
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   font-size: 0.9rem;
   position: relative;
 }

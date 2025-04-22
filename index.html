@@ -41,22 +41,9 @@
     <meta name="twitter:url" content="https://www.aurascouting.com/">
 
     <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-        
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Aura Scouting",
-        "url": "https://www.aurascouting.com",
-        "logo": "https://www.aurascouting.com/images/mini-logo.png",
-        "sameAs": [
-            "https://www.instagram.com/aurascouting"
-        ]
-    }
-    </script>
+    <script src="seo.js"></script>
 
-    <!-- Favicon -->
-    <!-- Mejorado: Orden y tipos de favicon -->
+    <!-- Favicon mejorado: Orden y tipos de favicon -->
     <link rel="icon" href="/favicon/favicon.ico"> <!-- FavIcon principal -->
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png"> <!-- FavIcon PNG -->
     <link rel="icon" type="image/png" sizes="196x196" href="/favicon/favicon-196x196.png"> <!-- FavIcon PNG -->
@@ -81,149 +68,105 @@
     <link rel="preload" as="image" href="images/aura-scouting-europa.webp">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CQM1CVPZQF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CQM1CVPZQF');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQM1CVPZQF"></script>
+    <script src="gtag.js"></script>
     <!-- End Google Analytics -->
 </head>
 
 <body>
-    
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about">Who We Are</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#our-name">Home</a></li>|
+            <li><a href="#about">Who we are</a></li>|
+            <li><a href="#services">Our services</a></li>|
+            <li><a href="#how">We work</a></li>|
+            <li><a href="#why">Connect</a></li>|
+            <li><a href="#contact">Contact us</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home">
-        <img src="images/aura-scouting-logo.png" alt="Aura Scouting Logo" class="logo-image" loading="eager"
-            style="width: clamp(400px, 70vw, 1000px);">
-        <h1 class="hero-text">
+    <!-- Our name section -->
+    <section id="our-name">
+        <img src="images/aura-scouting-logo.png" alt="Aura Scouting Logo" id="our-name-logo" loading="eager">
+        <h1 id="our-name-text">
             We offer models and agencies the opportunity to shine<br>on the global stage.
         </h1>
-    </header>
+    </section>
 
-    <!-- About Section -->
-    <section id="about"
-        style="background-image: url('images/aura-scouting-europa.webp'); background-size: cover; background-position: center;">
-        <div
-            style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 80px 20px; color: #fff; background-color: rgba(0,0,0,0.6);">
-            <div style="flex: 1 1 300px; max-width: 500px;">
-                <h2>Who We Are</h2>
+    <!-- About section -->
+    <section id="about">
+        <div class="big">
+            <div class="small">
+                <h2>Who we are</h2>
             </div>
-            <div style="flex: 1 1 300px; max-width: 500px;">
-                <div style="line-height: 1.8;">
-                    <h3>• As a global scouting agency, we specialize in discovering and promoting talent from diverse backgrounds, celebrating
-                    each individual’s unique beauty.</h3>
-                    <h3>• We provide structured access to global opportunities, acting as intermediaries between agencies to secure top-tier placements.</h3>
-                </div>
+            <div class="small">
+                <h3>• As a global scouting agency, we specialize in discovering and promoting talent from diverse backgrounds, celebrating
+                each individual’s unique beauty.</h3>
+                <h3>• We provide structured access to global opportunities, acting as intermediaries between agencies to secure top-tier placements.</h3>
             </div>
-            </div>
-            </section>
+        </div>
+    </section>
 
 
     <!-- Services Section -->
-    <section id="services" style="background-color: #f9f9f9; padding: 80px 20px;">
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-            <div style="flex: 1 1 300px; text-align: center;">
-                <img src="images/aura-scouting-asia.webp" alt="Scouting services in Asia" loading="lazy"
-                    style="width: 100%; border-radius: 10px;">
-                <h2>Our Scouting Services</h2>
-            </div>
-        <div style="flex: 1 1 300px; max-width: 600px;">
-            <div style="font-size: 1.1rem; line-height: 1.8;">
-                <h3>• Connections with Agencies in America, Asia 
-                </p> & Europe</h3>
-                <h3>• Work Permit & Relocation Management</h3>
-                <h3>• Scouting & Talent Development</h3>
-                <h3>• Mentorship & Continuous Support</h3>
-            </div>
+    <section id="services">
+        <div class="image-frame">
+            <img src="images/aura-scouting-asia.webp" alt="Scouting services in Asia" loading="lazy" class="services-image">
         </div>
-
-
+        <div class="text-frame">
+            <h2>Our scouting services</h2>
+            <h3>• Connections with Agencies in America, Asia & Europe</h3>
+            <h3>• Work Permit & Relocation Management</h3>
+            <h3>• Scouting & Talent Development</h3>
+            <h3>• Mentorship & Continuous Support</h3>
         </div>
     </section>
 
-    <!-- How We Work -->
-    <section id="how" style="background-color: #fff; padding: 80px 20px;">
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-            <div style="flex: 1 1 300px; text-align: center;">
-                <img src="images/aura-scouting-mexico.webp" alt="Scouting process in Mexico" loading="lazy"
-                    style="width: 100%; border-radius: 10px;">
-                <h2>How We Work</h2>
-            </div>
-            <div style="flex: 1 1 300px; max-width: 600px;">
-                <div style="font-size: 1.1rem; line-height: 1.8;">
-                    <h3>• Scouting & Evaluation</h3>
-                    <h3>• Placement & Negotiation</h3>
-                    <h3>• Document Assistance</h3>
-                    <h3>• Comprehensive Support</h3>
-                    <h3>• Performance Monitoring</h3>
-                    <h3>• Payment Review</h3>
-                </div>
-            </div>
+    <!-- How we work -->
+    <section id="how">
+        <div class="image-frame">
+            <img src="images/aura-scouting-mexico.webp" alt="Scouting process in Mexico" loading="lazy" class="how-image">
+        </div>
+        <div class="text-frame">
+            <h2>How we work</h2>
+            <h3>• Scouting & Evaluation</h3>
+            <h3>• Placement & Negotiation</h3>
+            <h3>• Document Assistance</h3>
+            <h3>• Comprehensive Support</h3>
+            <h3>• Performance Monitoring</h3>
+            <h3>• Payment Review</h3>
         </div>
     </section>
 
 
-<!-- Why Choose Us -->
-<section id="why"
-    style="background-image: url('images/aura-scouting-argentina.webp'); background-size: cover; background-position: center; padding: 100px 20px; color: white;">
-    <div
-        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background-color: rgba(0,0,0,0.6); padding: 40px;">
-        <div style="flex: 2 1 500px;">
+    <!-- Why choose us -->
+    <section id="why">
+        <div class="frame">
             <h2>Connect with Top Agencies</h2>
-            <div style="line-height: 1.8;">
-                <h3>• A strong network of agencies offering exclusive opportunities</h3>
-                <h3>• A secure and transparent process from selection to contract</h3>
-                <h3>• Comprehensive support before, during, and after each experience</h3>
-                <h3>• Collaboration with mother agencies for long-term careers</h3>
-            </div>
+            <h3>• A strong network of agencies offering exclusive opportunities</h3>
+            <h3>• A secure and transparent process from selection to contract</h3>
+            <h3>• Comprehensive support before, during, and after each experience</h3>
+            <h3>• Collaboration with mother agencies for long-term careers</h3>
         </div>
-    </div>
-</section>
-
-
+    </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for any inquiries or collaborations.</p>
-            <div class="contact-info">
-                <p><strong>DIRECTORS</strong><br>
-                    <a href="mailto:emmanuel@aurascouting.com">emmanuel@aurascouting.com</a><br>
-                    <a href="mailto:magali@aurascouting.com">magali@aurascouting.com</a>
-                </p>
-                <p><strong>INQUIRIES</strong><br>
-                    <a href="mailto:info@aurascouting.com">info@aurascouting.com</a>
-                </p>
-                <p><strong>Follow Us:</strong> <a href="https://instagram.com/aurascouting" target="_blank"
-                        rel="noopener">Instagram</a></p>
-            </div>
-        </div>
+        <h2>Contact Us</h2>
+        <label>Get in touch with us for any inquiries or collaborations.</label>
+        <h3>DIRECTORS</h3>
+        <a href="mailto:emmanuel@aurascouting.com">emmanuel@aurascouting.com</a>
+        <a href="mailto:magali@aurascouting.com">magali@aurascouting.com</a>
+        <h3>INQUIRIES</h3>
+        <a href="mailto:info@aurascouting.com">info@aurascouting.com</a>
+        <h3>Follow Us:</h3>
+        <a href="https://instagram.com/aurascouting" target="_blank" rel="noopener">Instagram</a></p>
     </section>
 
     <!-- Footer -->
-    <footer style="background: #000; color: #fff; text-align: center; padding: 40px 20px;">
-        <div style="max-width: 800px; margin: auto;">
-            <p>&copy; 2025 Aura Scouting. All rights reserved.</p>
-            <nav>
-                <a href="#home" style="color: #fff; margin: 0 10px;">Home</a> |
-                <a href="#about" style="color: #fff; margin: 0 10px;">About</a> |
-                <a href="#contact" style="color: #fff; margin: 0 10px;">Contact</a>
-            </nav>
-        </div>
+    <footer>
+        &copy; 2025 Aura Scouting. All rights reserved.
     </footer>
 </body>
-
 </html>
