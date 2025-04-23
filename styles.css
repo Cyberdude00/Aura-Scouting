@@ -80,7 +80,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 5%;
+  margin: 0 4%;
 }
 
 nav ul li a {
@@ -284,5 +284,9 @@ footer {
   body #services div,
   body #how div {
     padding: 10px;
+  }
+
+  #services, #how {
+    flex-direction: column;
   }
 }
