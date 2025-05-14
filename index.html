@@ -41,16 +41,29 @@
     <meta name="twitter:url" content="https://www.aurascouting.com/">
 
     <!-- Schema.org Structured Data -->
-    <script src="seo.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Aura Scouting",
+        "url": "https://www.aurascouting.com",
+        "logo": "https://www.aurascouting.com/images/mini-logo.png",
+        "sameAs": [
+            "https://www.instagram.com/aurascouting"
+        ]
+    }
+    </script>
 
-    <!-- Favicon mejorado: Orden y tipos de favicon -->
-    <link rel="icon" href="/favicon/favicon.ico"> <!-- FavIcon principal -->
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png"> <!-- FavIcon PNG -->
-    <link rel="icon" type="image/png" sizes="196x196" href="/favicon/favicon-196x196.png"> <!-- FavIcon PNG -->
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png"> <!-- FavIcon PNG -->
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg"> <!-- FavIcon SVG -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"> <!-- Apple Touch Icon -->
-    <link rel="manifest" href="/favicon/site.webmanifest"> <!-- Manifesto Web -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png">
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Manifest (PWA support) -->
+    <link rel="manifest" href="/favicon/manifest.json">
 
     <!-- Meta para Apple Web App -->
     <meta name="apple-mobile-web-app-title" content="Aura Scouting"> <!-- Meta título para Web App -->
@@ -58,10 +71,11 @@
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+
 
     <!-- Preload Key Images -->
     <link rel="preload" as="image" href="images/aura-scouting-logo.png">
@@ -69,19 +83,22 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQM1CVPZQF"></script>
-    <script src="gtag.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CQM1CVPZQF');
+    </script>
     <!-- End Google Analytics -->
 </head>
+
 
 <body>
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#our-name">Home</a></li>|
-            <li><a href="#about">Who we are</a></li>|
-            <li><a href="#services">Our services</a></li>|
-            <li><a href="#how">We work</a></li>|
-            <li><a href="#why">Connect</a></li>|
+            <li><a href="#about">Who we are</a></li>
+            <li><a href="#services">Our services</a></li>
             <li><a href="#contact">Contact us</a></li>
         </ul>
     </nav>
@@ -112,7 +129,7 @@
     <!-- Services Section -->
     <section id="services">
         <div class="image-frame">
-            <img src="images/aura-scouting-asia.webp" alt="Scouting services in Asia" loading="lazy" class="services-image">
+            <img src="images/aura-scouting-asia.JPG" alt="Scouting services in Asia" loading="lazy" class="services-image">
         </div>
         <div class="text-frame">
             <h2>Our scouting services</h2>
@@ -126,7 +143,7 @@
     <!-- How we work -->
     <section id="how">
         <div class="image-frame">
-            <img src="images/aura-scouting-mexico.webp" alt="Scouting process in Mexico" loading="lazy" class="how-image">
+            <img src="images/aura-scouting-mexico.jpg" alt="Scouting process in Mexico" loading="lazy" class="how-image">
         </div>
         <div class="text-frame">
             <h2>How we work</h2>
