@@ -11,3 +11,4 @@ La pagina no tiene errores pero podria limpiarse un poco mas el codigo
 Tareas Futuras
 -Conectar Gallery con Google o algo asi Cloudinary es tedioso
 -Conectar un contact Form para que lleguen al mail de Zoho, solo se sube una imagen por lo pronto
+**Aca no hay nada de SEO ni esa parte solo en el Host luego la pongo aca en main**
