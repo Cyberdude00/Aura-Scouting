@@ -1,4 +1,4 @@
-/* ======================== BASE COLORS & FONTS ======================== */
+/* ======================== BASE ======================== */
 :root {
   --font-main: "IBM Plex Mono", monospace;
   --color-bg: #fff;
@@ -8,16 +8,10 @@
   --color-text-light: #ffffff;
 }
 
-/* ======================== GLOBAL / RESET ======================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
+
 body {
   font-family: var(--font-main);
   font-weight: 200;
@@ -26,9 +20,23 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* ======================== RESET ======================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Evita el scroll horizontal en móviles y pantallas pequeñas */
+html,
+body {
+  overflow-x: hidden;
 }
 
 /* ======================== NAVIGATION ======================== */
@@ -39,8 +47,8 @@ nav {
   background: var(--color-dark);
   padding: 10px 0;
   z-index: 1000;
-  color: var(--color-accent);
   transition: background-color 0.3s ease;
+  color: var(--color-accent);
 }
 nav ul {
   list-style: none;
@@ -72,11 +80,13 @@ nav a:focus {
   align-items: center;
   text-align: center;
   padding: 20px;
+  /* padding-left solo en desktop */
   color: #fff;
   position: relative;
   z-index: 2;
   box-sizing: border-box;
 }
+
 #our-name-logo {
   width: clamp(400px, 70dvw, 1000px);
   animation: fadeIn 2s ease forwards;
@@ -88,6 +98,7 @@ nav a:focus {
   max-width: 800px;
   line-height: 1.6;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -98,13 +109,15 @@ nav a:focus {
     transform: translateY(0);
   }
 }
+
+/* Solo padding-left en pantallas grandes para centrar bien en móvil */
 @media (min-width: 700px) {
   #our-name {
     padding-left: 60px;
   }
 }
 
-/* ======================== ABOUT SECTION ======================== */
+/* ======================== ABOUT ======================== */
 #about {
   background-color: var(--color-light);
   background-image: url("images/aura-scouting-europa.webp");
@@ -131,7 +144,7 @@ nav a:focus {
   line-height: 1.8;
 }
 
-/* ======================== SERVICES SECTION ======================== */
+/* ======================== SERVICES ======================== */
 #services {
   background-color: #181a1b;
   padding: 80px 20px;
@@ -155,7 +168,7 @@ nav a:focus {
   padding: 60px;
 }
 
-/* ======================== HOW WE WORK SECTION ======================== */
+/* ======================== HOW WE WORK ======================== */
 #how {
   background-color: #181a1b;
   padding: 80px 20px;
@@ -178,7 +191,7 @@ nav a:focus {
   padding-left: 60px;
 }
 
-/* ======================== WHY CHOOSE US SECTION ======================== */
+/* ======================== WHY CHOOSE US ======================== */
 #why {
   background-image: url("images/aura-scouting-argentina.webp");
   background-size: cover;
@@ -195,32 +208,55 @@ nav a:focus {
   max-width: 900px;
 }
 
-/* ======================== MODEL SUBMISSION ======================== */
-#model-submission {
-  position: relative; /* for overlay */
-  padding: 60px 0 40px 0;
-  background: #111;
-  z-index: 2;
-}
-
-#model-submission h2 {
-  color: #fff;
+/* ======================== CONTACT SECTION ======================== */
+#contact {
+  background-color: var(--color-dark);
+  color: white;
+  padding-top: 40px;
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Contact links and headings */
+#contact h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+#contact h3 {
+  margin-top: 15px;
+}
+#contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 5px 5px;
+}
+#contact a:hover {
+  color: #fff;
+}
+
+/* ======================== CONTACT FORM ======================== */
 .contact-form-wrapper {
   max-width: 420px;
-  margin: 0 auto;
+  margin: 48px auto 32px auto; /* margen arriba Y abajo */
   background: var(--color-dark);
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
   padding: 36px 25px 32px 25px;
   color: var(--color-text-light);
   font-family: var(--font-main);
-  position: relative;
+}
+
+.contact-form-wrapper h2 {
+  color: var(--color-accent);
+  font-family: var(--font-main);
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
 }
 
 #applicationForm {
@@ -247,9 +283,11 @@ nav a:focus {
   transition: 0.3s;
   border: 2px dashed var(--color-accent);
 }
+
 .picture-to-upload:hover {
   background: #222;
 }
+
 .picture-to-upload input[type="file"] {
   position: absolute;
   width: 100%;
@@ -257,17 +295,21 @@ nav a:focus {
   opacity: 0;
   cursor: pointer;
 }
+
 .img-preview {
   max-width: 98%;
   max-height: 98%;
   display: none;
 }
+
 .picture-to-upload.previewing .img-preview {
   display: block;
 }
+
 .picture-to-upload.previewing .upload-main-text {
   display: none;
 }
+
 .upload-main-text {
   color: #fff;
   font-family: var(--font-main);
@@ -291,13 +333,16 @@ input.text {
   outline: none;
   transition: border-color 0.3s;
 }
+
 input.text::placeholder {
   color: #ccc;
 }
+
 input.text.error-placeholder {
   border-bottom-color: #ff3131;
   color: #ff3131;
 }
+
 button[type="submit"] {
   padding: 13px 0;
   background: transparent;
@@ -312,74 +357,9 @@ button[type="submit"] {
   transition: all 0.2s;
   margin-top: 7px;
 }
+
 button[type="submit"]:hover {
   background: var(--color-accent);
-  color: #fff;
-}
-
-/* ===== Overlay for "We are working here" ===== */
-#model-submission .overlay-working {
-  position: absolute;
-  inset: 0;
-  background: rgba(30, 30, 30, 0.87);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  border-radius: 0 0 18px 18px;
-  animation: fadeInOverlay 0.7s;
-  pointer-events: all;
-}
-@keyframes fadeInOverlay {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#model-submission .overlay-content {
-  text-align: center;
-  color: #fff;
-  padding: 32px 30px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 14px;
-  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.18);
-  max-width: 340px;
-}
-#model-submission .overlay-content h2 {
-  margin-bottom: 8px;
-  font-size: 1.45rem;
-  color: var(--color-accent);
-  font-family: var(--font-main);
-}
-
-/* ======================== CONTACT SECTION (EMAILS) ======================== */
-#contact {
-  background-color: var(--color-dark);
-  color: white;
-  padding-top: 40px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#contact h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 20px;
-}
-#contact h3 {
-  margin-top: 15px;
-}
-#contact a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 5px 5px;
-}
-#contact a:hover {
   color: #fff;
 }
 
@@ -409,7 +389,7 @@ footer {
     flex-direction: column;
   }
   .contact-form-wrapper {
-    margin: 32px auto 48px auto;
+    margin: 32px auto 32px auto;
     padding: 24px 8px 24px 8px;
   }
 }
