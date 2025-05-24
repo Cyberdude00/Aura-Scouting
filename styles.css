@@ -9,8 +9,7 @@
 
 html,
 body {
-  background: #181818 url("aura-scouting-america.webp") no-repeat center center
-    fixed;
+  background: #181818 no-repeat center center fixed;
   background-size: cover;
   color: var(--text);
   font-family: var(--font-main);
@@ -48,8 +47,8 @@ a:hover {
 .header-title {
   flex: 1 1 auto;
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 4000;
   letter-spacing: 2px;
   color: var(--text);
   opacity: 0.92;
