@@ -66,16 +66,14 @@
     <link rel="manifest" href="/favicon/manifest.json">
 
     <!-- Meta para Apple Web App -->
-    <meta name="apple-mobile-web-app-title" content="Aura Scouting"> <!-- Meta título para Web App -->
-    <meta name="theme-color" content="#000000"> <!-- Meta color de tema para dispositivos móviles -->
+    <meta name="apple-mobile-web-app-title" content="Aura Scouting">
+    <meta name="theme-color" content="#000000">
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-
 
     <!-- Preload Key Images -->
     <link rel="preload" as="image" href="images/aura-scouting-logo.png">
@@ -118,18 +116,20 @@
                 <h2>Who we are</h2>
             </div>
             <div class="small">
-                <h3>• As a global scouting agency, we specialize in discovering and promoting talent from diverse backgrounds, celebrating
-                each individual’s unique beauty.</h3>
-                <h3>• We provide structured access to global opportunities, acting as intermediaries between agencies to secure top-tier placements.</h3>
+                <h3>• As a global scouting agency, we specialize in discovering and promoting talent from diverse
+                    backgrounds, celebrating
+                    each individual’s unique beauty.</h3>
+                <h3>• We provide structured access to global opportunities, acting as intermediaries between agencies to
+                    secure top-tier placements.</h3>
             </div>
         </div>
     </section>
 
-
     <!-- Services Section -->
     <section id="services">
         <div class="image-frame">
-            <img src="images/aura-scouting-asia.JPG" alt="Scouting services in Asia" loading="lazy" class="services-image">
+            <img src="images/aura-scouting-asia.webp" alt="Scouting services in Asia" loading="lazy"
+                class="services-image">
         </div>
         <div class="text-frame">
             <h2>Our scouting services</h2>
@@ -143,7 +143,8 @@
     <!-- How we work -->
     <section id="how">
         <div class="image-frame">
-            <img src="images/aura-scouting-mexico.jpg" alt="Scouting process in Mexico" loading="lazy" class="how-image">
+            <img src="images/aura-scouting-mexico.jpg" alt="Scouting process in Mexico" loading="lazy"
+                class="how-image">
         </div>
         <div class="text-frame">
             <h2>How we work</h2>
@@ -156,7 +157,6 @@
         </div>
     </section>
 
-
     <!-- Why choose us -->
     <section id="why">
         <div class="frame">
@@ -168,6 +168,23 @@
         </div>
     </section>
 
+        <!-- Aquí va el formulario dentro de contact -->
+        <div class="contact-form-wrapper">
+            <h2>Model Submission</h2>
+            <form id="applicationForm" novalidate>
+                <div class="picture-to-upload" id="pictureBox">
+                    <input id="photo" class="file-input" type="file" name="photo" accept="image/*" required>
+                    <img class="img-preview" src="images/aura-scouting-logo.png" alt="Preview" />
+                    <span class="upload-main-text" id="uploadText">Take a Pic</span>
+                </div>
+                <input class="text" id="name" type="text" name="name" placeholder="Name*" required>
+                <input class="text" id="email" type="email" name="email" placeholder="Email*" required>
+                <input class="text" id="height" type="text" name="height" placeholder="Height*" required>
+                <input class="text" id="cellphone" type="text" name="cellphone" placeholder="Cell Phone">
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
@@ -178,12 +195,16 @@
         <h3>INQUIRIES</h3>
         <a href="mailto:info@aurascouting.com">info@aurascouting.com</a>
         <h3>Follow Us:</h3>
-        <a href="https://instagram.com/aurascouting" target="_blank" rel="noopener">Instagram</a></p>
-    </section>
+        <a href="https://instagram.com/aurascouting" target="_blank" rel="noopener">Instagram</a>
+
 
     <!-- Footer -->
     <footer>
         &copy; 2025 Aura Scouting. All rights reserved.
     </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
+
 </html>
