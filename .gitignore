@@ -1,0 +1,88 @@
+# Python specific ignored files
+# -----------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+.venv/
+.env/ # For dotenv files storing environment variables
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+/htmlcov/ # Python coverage reports
+/.tox/ # tox (testing tool) directories
+.coverage
+.coverage.*
+.cache
+.pytest_cache/ # pytest cache directory
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/ # Hypothesis (testing tool) files
+
+# Flask specific ignored files
+# ----------------------------
+instance/ # Flask's instance folder, often contains config.py with secrets
+.webassets-cache/ # Flask-Webassets cache
+/uploads/ # Directory where uploaded files are stored (if you have one)
+# If you have an SQLite database, it might look like this:
+*.db
+*.sqlite
+*.sqlite3
+/site.db # Common name for a Flask development SQLite database
+
+# IDEs and Editors
+# ----------------
+.idea/ # PyCharm
+.vscode/ # VS Code
+.DS_Store # macOS system files
+Thumbs.db # Windows thumbnail cache
+ehthumbs.db # Windows thumbnail cache
+.project
+.settings
+.factorypath
+.classpath
+
+# Environment variables
+# ---------------------
+# These are crucial! Never commit files containing sensitive information like API keys, database credentials, etc.
+# Use a .env file locally and load it into your application for development.
+.env
+.flaskenv
+
+# Other common temporary or generated files
+# ----------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp # Vim swap files
+*.swo # Vim swap files
+
+# Frontend build artifacts (if you integrate a frontend framework like React/Vue/Angular)
+# --------------------------------------------------------------------------------------
+# For Node.js projects (e.g., if you use npm/yarn for static assets)
+/node_modules/
+/dist/ # Common output directory for frontend builds
+/build/ # Another common output directory for frontend builds
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

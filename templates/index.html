@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Scouting | International Scouting Model Agency</title>
+    <meta name="description"
+        content="Aura Scouting is a modeling agency offering a scouting to connect agencies and promote talent from around the world. We connect Asia America and Europe.">
+    <meta name="keywords"
+        content="modeling agency, model scouting, international models, model promotion, talent agency">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aurascouting.com/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">Who we are</a></li>
+            <li><a href="#services">Our services</a></li>
+            <li><a href="#model-submission">Model Submission</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Our name section -->
+    <section id="our-name">
+        <img src="{{ url_for('static', filename='img/aura-scouting-logo.png') }}" alt="Aura Scouting Logo" id="our-name-logo" loading="eager">
+        <h1 id="our-name-text">
+            We offer models and agencies the opportunity to shine<br>on the global stage.
+        </h1>
+    </section>
+
+    <!-- About section -->
+    <section id="about">
+        <div class="big">
+            <div class="small">
+                <h2>Who we are</h2>
+            </div>
+            <div class="small">
+                <h3>• As a global scouting agency, we specialize in discovering and promoting talent from diverse
+                    backgrounds, celebrating each individual’s unique beauty.</h3>
+                <h3>• We provide structured access to global opportunities, acting as intermediaries between agencies to
+                    secure top-tier placements.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="image-frame">
+            <img src="{{ url_for('static', filename='img/aura-scouting-asia.webp') }}" alt="Scouting services in Asia" loading="lazy"
+                class="services-image">
+        </div>
+        <div class="text-frame">
+            <h2>Our scouting services</h2>
+            <h3>• Connections with Agencies in America, Asia & Europe</h3>
+            <h3>• Work Permit & Relocation Management</h3>
+            <h3>• Scouting & Talent Development</h3>
+            <h3>• Mentorship & Continuous Support</h3>
+        </div>
+    </section>
+
+    <!-- How we work -->
+    <section id="how">
+        <div class="image-frame">
+            <img src="{{ url_for('static', filename='img/aura-scouting-mexico.jpg') }}" alt="Scouting process in Mexico" loading="lazy"
+                class="how-image">
+        </div>
+        <div class="text-frame">
+            <h2>How we work</h2>
+            <h3>• Scouting & Evaluation</h3>
+            <h3>• Placement & Negotiation</h3>
+            <h3>• Document Assistance</h3>
+            <h3>• Comprehensive Support</h3>
+            <h3>• Performance Monitoring</h3>
+            <h3>• Payment Review</h3>
+        </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section id="why">
+        <div class="frame">
+            <h2>Connect with Top Agencies</h2>
+            <h3>• A strong network of agencies offering exclusive opportunities</h3>
+            <h3>• A secure and transparent process from selection to contract</h3>
+            <h3>• Comprehensive support before, during, and after each experience</h3>
+            <h3>• Collaboration with mother agencies for long-term careers</h3>
+        </div>
+    </section>
+
+    <!-- Model Submission Section (new, with overlay) -->
+    <section id="model-submission">
+        <h2>Model Submission</h2>
+        <div class="contact-form-wrapper">
+            <!-- <div class="overlay-working">
+                <div class="overlay-content">
+                    <h2>We are working here</h2>
+                    <p>Just send your submission by email</p>
+                </div>
+            </div> -->
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="mb-4">
+                        {% for category, message in messages %}
+                            <div class="p-3 rounded-lg text-sm
+                                {% if category == 'success' %} bg-green-100 text-green-700 border border-green-400
+                                {% elif category == 'danger' %} bg-red-100 text-red-700 border border-red-400
+                                {% else %} bg-gray-100 text-gray-700 border border-gray-400
+                                {% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form id="applicationForm" action="{{ url_for('send_email') }}" method="POST" class="space-y-6" enctype="multipart/form-data">
+                <div>
+                    <label for="attachment">Attach Image:</label>
+                    <input
+                        type="file"
+                        id="attachment"
+                        name="attachment"
+                        required
+                        accept="image/*" class="image-input"
+                    >
+                    <div id="image-preview-container">
+                        <span class="upload-main-text" id="uploadText">Photo preview</span>
+                        <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
+                    </div>
+                </div>
+                <div>
+                    <label for="actor_name">Name:</label>
+                    <input
+                        type="text"
+                        id="actor_name"
+                        name="user_email"
+                        class="text"
+                        placeholder="John Smith"
+                    >
+                </div>
+                <div>
+                    <label for="user_email">Your Email (for replies):</label>
+                    <input
+                        type="email"
+                        id="user_email"
+                        name="user_email"
+                        class="text"
+                        placeholder="your_email@example.com"
+                    >
+                </div>
+                <div>
+                    <label for="height">Height:</label>
+                    <input
+                        type="text"
+                        id="height"
+                        name="height"
+                        required
+                        class="text"
+                        placeholder="Your actor height"
+                    >
+                </div>
+                <div>
+                    <label for="cellphone">Cellphone:</label>
+                    <input
+                        type="number"
+                        id="cellphone"
+                        name="cellphone"
+                        min="0" step="1"
+                        required
+                        class="text"
+                        placeholder="(667) 123 1234"
+                    >
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section (emails, not form) -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <label>Get in touch with us for any inquiries or collaborations.</label>
+        <h3>DIRECTORS</h3>
+        <a href="mailto:emmanuel@aurascouting.com">emmanuel@aurascouting.com</a>
+        <a href="mailto:magali@aurascouting.com">magali@aurascouting.com</a>
+        <h3>INQUIRIES</h3>
+        <a href="mailto:info@aurascouting.com">info@aurascouting.com</a>
+        <h3>Follow Us:</h3>
+        <a href="https://instagram.com/aurascouting" target="_blank" rel="noopener">Instagram</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Aura Scouting. All rights reserved.
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
