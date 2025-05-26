@@ -16,3 +16,10 @@ Tareas Futuras
 
 # Para instalación del back en python debes instalar python en tu ambiente y el corres el siguiente comando en la consola en tu raiz de proyecto
 pip install -r requirements.txt
+
+# Variables del entorno de pruebas
+Editas el nombre del archivo .env_example para ser solo .env y editas MAIL_USERNAME, MAIL_DEFAULT_SENDER y MAIL_PASSWORD
+
+# Para MAIL PASSWORD seguir el link:
+# Try using Google App Password
+# url: https://myaccount.google.com/apppasswords
