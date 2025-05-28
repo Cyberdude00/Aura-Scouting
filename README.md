@@ -5,6 +5,11 @@
 
 #ERRORES 
 
-Al subirlo a servidor no se ve la imagen de fodo y en la ultima seccion de contacto se pierde el formato
+Se empalma la X en pantsllas pequeñas
+el text de directors puede ir en el footer y centrado
 
-Mejoras a Futuro agregar un contact form
+#MEJORAS
+
+agregar php al contact form
+editar modelos desde front
+verificar baidu
