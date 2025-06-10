@@ -1,0 +1,406 @@
+const models = [
+  // === Model: ADAN - NEW ICON ===
+  {
+    name: "Adan",
+    gender: "Hombres",
+    // Antes apuntaba a /full/ porque era lo único que tenías. Si mañana subes una /full/ real (más pesada), el script la toma sola.
+    photo: "../models/hombres/adan - new icon/book/mini/adan_1.webp", // Ahora apunta a medium (tu calidad estándar hoy)
+    height: "6'1-1,85m",
+    measurements: "W 30-75cm",
+    hair: "Brown",
+    eyes: "Brown",
+    shoe: "8/42",
+    portfolio: [
+      // Todos los book ahora en /mini/. El script intentará /full/ si en el futuro subes máxima calidad.
+      "../models/hombres/adan - new icon/book/mini/adan_1.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_2.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_3.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_4.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_5.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_6.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_7.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_8.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_9.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_10.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_11.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_12.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_13.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_14.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_15.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_16.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_17.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_18.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_19.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_20.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_21.webp",
+      "../models/hombres/adan - new icon/book/mini/adan_22.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: AGUSTIN BEJOS - NEW ICON ===
+  {
+    name: "Agustin",
+    gender: "Hombres",
+    // Polas: igual, medium porque no tienes full.
+    photo: "../models/hombres/agustin bejos - new icon/polas/mini/agustin bejos__1.webp",
+    height: "6'2-1,88m",
+    measurements: "W 32.5-81cm",
+    hair: "Brown",
+    eyes: "Green",
+    shoe: "8.5/42",
+    portfolio: [
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book1.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book2.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book3.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book4.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book5.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book6.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book7.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book8.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book9.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book10.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book11.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book12.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book13.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book14.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book15.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book16.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book17.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book18.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book19.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book20.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book21.webp",
+      "../models/hombres/agustin bejos - new icon/book/mini/agustin b book22.webp",
+      // Polas: igual, medium.
+      "../models/hombres/agustin bejos - new icon/polas/mini/agustin bejos__1.webp",
+      "../models/hombres/agustin bejos - new icon/polas/mini/agustin bejos__2.webp",
+      "../models/hombres/agustin bejos - new icon/polas/mini/agustin bejos__3.webp",
+      "../models/hombres/agustin bejos - new icon/polas/mini/agustin bejos__4.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: ANGEL BRETT - NEW ICON ===
+  {
+    name: "Angel",
+    gender: "Hombres",
+    photo: "../models/hombres/angel brett - new icon/polas/mini/angel bret__1.webp",
+    height: "6'1-1,85m",
+    measurements: "31-74cm",
+    hair: "Black",
+    eyes: "Brown",
+    shoe: "8.5/42",
+    portfolio: [
+      // Book en medium. NOTA: checa que no tengas imágenes con "01" y "1" ambas, podrían ser duplicados o nombres diferentes (unifícalos si puedes).
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book01.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book02.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book03.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book04.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book05.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book06.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book07.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book08.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book09.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book010.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book011.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book012.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book013.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book014.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book015.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book016.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book017.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book018.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book019.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book020.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book021.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book022.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book023.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book024.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book025.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book026.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book027.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book028.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book029.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book030.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book031.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book032.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book033.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book034.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book035.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book036.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book037.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book038.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book039.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book040.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book041.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book042.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book043.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book044.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book045.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book046.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book047.webp",
+      "../models/hombres/angel brett - new icon/book/mini/angel bret book01.webp", // ¿Duplicado del 01? Unifica nombres.
+      // Polas en medium:
+      "../models/hombres/angel brett - new icon/polas/mini/angel bret__2.webp",
+      "../models/hombres/angel brett - new icon/polas/mini/angel bret__3.webp",
+      "../models/hombres/angel brett - new icon/polas/mini/angel bret__4.webp",
+      "../models/hombres/angel brett - new icon/polas/mini/angel bret__5.webp",
+      "../models/hombres/angel brett - new icon/polas/mini/angel bret__6.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: JORGE TIRADO -BLINK ===
+  {
+    name: "Jorge Tirado",
+    gender: "Hombres",
+    // Caso especial: este modelo sí tiene full (máxima calidad), entonces lo dejo apuntando a full.
+    photo: "../models/hombres/jorge tirado -blink/full/jorge tirado__16.webp",
+    height: "6'2-1,87m",
+    measurements: "W 30-72cm",
+    hair: "Black",
+    eyes: "Brown",
+    shoe: "10.5/44",
+    portfolio: [
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__0.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__1.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__2.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__3.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__4.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__5.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__6.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__7.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__8.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__9.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__10.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__11.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__12.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__13.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__14.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__15.webp",
+      "../models/hombres/jorge tirado -blink/full/jorge tirado__16.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: JOSEPH BIZARRO ' BLINK ===
+  {
+    name: "Joseph Bizarro",
+    gender: "Hombres",
+    // Igual, en full porque sí existen esas fotos en la máxima calidad.
+    photo: "../models/hombres/joseph bizarro - blink/full/joseph bizarro__1.webp",
+    height: "6'1-1,85m",
+    measurements: "W 32-80cm",
+    hair: "Brown",
+    eyes: "Brown",
+    shoe: "43",
+    portfolio: [
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__1.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__2.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__3.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__4.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__5.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__6.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__7.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__8.webp",
+      "../models/hombres/joseph bizarro - blink/full/joseph bizarro__9.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: Kevin Rodriguez - Ceres ===
+  {
+    name: "Kevin Rodriguez",
+    gender: "Hombres",
+    // El main-book solo existe en medium, así que apunta ahí.
+    photo: "../models/hombres/kevin rodriguez - ceres/book/mini/17-kevin-rodriguez-main-book-ceres.webp",
+    height: "6'2-1,88m",
+    measurements: "W 30.5-77cm",
+    hair: "Brown",
+    eyes: "Brown",
+    shoe: "9.5/44",
+    portfolio: [
+      "../models/hombres/kevin rodriguez - ceres/book/mini/1-kevin-rodriguez-main-book-ceres.webp", // Solo existe en medium hoy, pero si subes full la agarra sola.
+      "../models/hombres/kevin rodriguez - ceres/book/mini/2-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/3-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/4-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/5-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/6-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/7-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/8-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/9-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/10-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/11-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/12-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/13-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/14-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/15-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/16-kevin-rodriguez-main-book-ceres.webp",
+      "../models/hombres/kevin rodriguez - ceres/book/mini/17-kevin-rodriguez-main-book-ceres.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: ROBBY POWERS - NEW ICON ===
+  {
+    name: "Robby Powers",
+    gender: "Hombres",
+    // Solo tienes mini
+    photo: "../models/hombres/robby powers - new icon/book/mini/robby powers__1.jpg",
+    height: "6'2-1,87.5m",
+    measurements: "W 31/-79cm",
+    hair: "Brown",
+    eyes: "Blue",
+    shoe: "11.5/43",
+    portfolio: [
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__1.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__2.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__3.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__4.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__5.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__6.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__7.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__8.jpg",
+      "../models/hombres/robby powers - new icon/book/mini/robby powers__9.jpg",
+      "../models/hombres/robby powers - new icon/polas/mini/ROBBY POWERS - NEW ICON Polas_1.webp",
+      "../models/hombres/robby powers - new icon/polas/mini/ROBBY POWERS - NEW ICON Polas_2.webp",
+      "../models/hombres/robby powers - new icon/polas/mini/ROBBY POWERS - NEW ICON Polas_3.webp",
+      "../models/hombres/robby powers - new icon/polas/mini/ROBBY POWERS - NEW ICON Polas_4.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: Salih Topcouglu ===
+  {
+    name: "Salih",
+    gender: "Hombres",
+    // Book solo medium (si subes full la toma sola).
+    photo: "../models/hombres/salih topcouglu/book/mini/salih book1.webp",
+    height: "6'2-1,88m",
+    measurements: "W 30.5/-77cm",
+    hair: "Brown",
+    eyes: "Brown",
+    shoe: "8.5/43",
+    portfolio: [
+      // Polas igual, solo medium.
+      "../models/hombres/salih topcouglu/book/mini/salih book1.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book2.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book3.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book4.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book5.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book6.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book7.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book8.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book9.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book10.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book11.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book12.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book13.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book14.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book15.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book16.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book17.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book18.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book19.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book20.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book21.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book22.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book23.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book24.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book25.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book26.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book27.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book28.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book29.webp",
+      "../models/hombres/salih topcouglu/book/mini/salih book30.webp",
+      "../models/hombres/salih topcouglu/polas/mini/salih polas.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: Santiago Poggi - Ceres ===
+  {
+    name: "Santiago Poggi",
+    gender: "Hombres",
+    // Book solo medium
+    photo: "../models/hombres/santiago poggi - ceres/book/mini/65-santiago-poggi-2025-ceres.webp",
+    height: "6'2-1,88m",
+    measurements: "W 26-65cm",
+    hair: "Brown",
+    eyes: "Hazel",
+    shoe: "9/43",
+    portfolio: [
+      "../models/hombres/santiago poggi - ceres/book/mini/1-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/2-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/3-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/4-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/5-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/6-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/7-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/8-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/9-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/10-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/11-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/12-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/13-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/14-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/15-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/16-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/17-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/18-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/19-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/2-santiago-poggi-2025-ceres.webp",
+      // Las siguientes tenían doble // en la ruta, corregí a una sola
+      "../models/hombres/santiago poggi - ceres/book/mini/65-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/50-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/61-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/30-santiago-poggi-2025-ceres.webp",
+      "../models/hombres/santiago poggi - ceres/book/mini/95-santiago-poggi-2025-ceres.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+
+  // === Model: Santiago Zezular ===
+  {
+    name: "Santiago Zezular",
+    gender: "Hombres",
+    // Book solo medium (si subes full la toma sola)
+    photo: "../models/hombres/santiago zezular - ceres/book/mini/15-santiago-zezular-main-book-ceres.webp",
+    height: "6'1.5-1,87m",
+    measurements: "W 29.5-75cm",
+    hair: "Brown",
+    eyes: "Brown",
+    shoe: "11/45",
+    portfolio: [
+      "../models/hombres/santiago zezular - ceres/book/mini/1-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/2-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/3-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/4-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/5-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/6-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/7-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/8-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/9-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/10-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/11-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/12-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/13-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/14-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/15-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/16-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/17-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/18-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/19-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/20-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/21-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/22-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/23-santiago-zezular-main-book-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/book/mini/24-santiago-zezular-main-book-ceres.webp",
+      // Polas: única ruta fuera de "book", pero así está bien si el archivo existe
+      "../models/hombres/santiago zezular - ceres/polas/mini/1-santiago-zezular-compolaroid-ceres.webp",
+      "../models/hombres/santiago zezular - ceres/polas/mini/2-santiago-zezular-compolaroid-ceres.webp",
+    ],
+    instagram: []
+  }, // === End Model ===
+];
