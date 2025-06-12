@@ -6,6 +6,9 @@
   --color-light: #1c1e1f;
   --color-accent: #ff0000;
   --color-text-light: #ffffff;
+  --background-auras-america: url('../images/aura-scouting-america.webp');
+  --background-auras-europe: url('../images/aura-scouting-europa.webp');
+  --background-auras-argentina: url('../images/aura-scouting-argentina.webp');
 }
 
 /* ======================== GLOBAL / RESET ======================== */
@@ -65,7 +68,7 @@ nav a:focus {
 /* ======================== HERO SECTION ======================== */
 #our-name {
   height: 100vh;
-  background: url("./images/aura-scouting-america.webp") center/cover no-repeat;
+  background: var(--background-auras-america) center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,7 +110,7 @@ nav a:focus {
 /* ======================== ABOUT SECTION ======================== */
 #about {
   background-color: var(--color-light);
-  background-image: url("images/aura-scouting-europa.webp");
+  background-image: var(--background-auras-europe);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -180,7 +183,7 @@ nav a:focus {
 
 /* ======================== WHY CHOOSE US SECTION ======================== */
 #why {
-  background-image: url("images/aura-scouting-argentina.webp");
+  background-image: var(--background-auras-argentina);
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -315,43 +318,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: var(--color-accent);
   color: #fff;
-}
-
-/* ===== Overlay for "We are working here" ===== */
-#model-submission .overlay-working {
-  position: absolute;
-  inset: 0;
-  background: rgba(30, 30, 30, 0.87);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  border-radius: 0 0 18px 18px;
-  animation: fadeInOverlay 0.7s;
-  pointer-events: all;
-}
-@keyframes fadeInOverlay {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#model-submission .overlay-content {
-  text-align: center;
-  color: #fff;
-  padding: 32px 30px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 14px;
-  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.18);
-  max-width: 340px;
-}
-#model-submission .overlay-content h2 {
-  margin-bottom: 8px;
-  font-size: 1.45rem;
-  color: var(--color-accent);
-  font-family: var(--font-main);
 }
 
 /* ======================== CONTACT SECTION (EMAILS) ======================== */

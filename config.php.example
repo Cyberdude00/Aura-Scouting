@@ -17,8 +17,8 @@
   // Configuration Constants
   // IMPORTANT: Ensure this directory is writable by your web server and NOT publicly accessible.
   define('ALLOWED_IMAGE_TYPES', ['image/jpeg', 'image/png', 'image/gif']);
-  define('UPLOAD_TEMP_DIR', __DIR__ . './tmp_uploads/'); // Ensure this is NOT publicly accessible
-  define('EMAIL_ERROR_LOG_FILE', __DIR__ . './logs/email_errors.log'); // Ensure this is NOT publicly accessible
+  define('UPLOAD_TEMP_DIR', __DIR__ . '/tmp_uploads/'); // Ensure this is NOT publicly accessible
+  define('EMAIL_ERROR_LOG_FILE', __DIR__ . '/logs/email_errors.log'); // Ensure this is NOT publicly accessible
   define('MAX_UPLOAD_FILE_SIZE', 10 * 1024 * 1024); // This results in 10MB
 
 ?>

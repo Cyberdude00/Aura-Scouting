@@ -1,10 +1,8 @@
 <?php
   // Start a session to display messages
   session_start();
-
   // Include the configuration file
   require_once 'config.php';
-
   // --- Message Handling ---
   $message = '';
   $messageType = '';
@@ -47,7 +45,7 @@
     <meta name="baidu-site-verification" content="dQ8vW9gIHq" />
     <meta name="wechat-site-verification" content="d7c8e7bd89ed99ab7cd4e1f5ff14b9d0" />
     <meta name="seznam-site-verification" content="v7b9-82hg-jf9i-82dh-93yg-81db-x95w" />
-  
+
     <!-- Open Graph (Facebook, LinkedIn) -->
   <meta property="og:title" content="Aura Scouting | International Model Agency" />
     <meta property="og:description"
@@ -75,7 +73,6 @@
       ]
     }
     </script>
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -87,10 +84,10 @@
     <link rel="manifest" href="/favicon/manifest.json">
     <!-- Meta para Apple Web App -->
     <meta name="theme-color" content="#000000"> <!-- Meta color de tema para dispositivos móviles -->
-    <meta name="theme-color" content="#000000">    
+    <meta name="theme-color" content="#000000">
     <!-- Fonts (local first, fallback Google Fonts) -->
-    <link rel="preload" href="fonts/IBMPlexMono/IBMPlexMono-ExtraLight.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="fonts/IBMPlexMono/IBMPlexMono.css" />
+    <link rel="preload" href="./font/IBMPlexMono-ExtraLight.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./font/IBMPlexMono.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./public/css/index.css">
@@ -107,7 +104,6 @@
         gtag('js', new Date());
         gtag('config', 'G-TZFR0FFT5D');
     </script>
-
     <!-- Yandex Metrika -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -134,8 +130,6 @@
         <div><img src="https://mc.yandex.ru/watch/102400484" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
 </head>
-  
-
 <body>
     <!-- Navigation -->
     <nav>
@@ -188,7 +182,7 @@
     <!-- How we work -->
     <section id="how">
       <div class="image-frame">
-            <img src="images/aura-scouting-mexico.jpg" alt="Scouting process in Mexico" loading="lazy"
+            <img src="./public/images/aura-scouting-mexico.jpg" alt="Scouting process in Mexico" loading="lazy"
           class="how-image">
       </div>
       <div class="text-frame">
@@ -213,30 +207,8 @@
       </div>
     </section>
 
-     <!-- Model Submission Section -->
-     <section id="model-submission">
-        <h2>Model Submission</h2>
-        <div class="contact-form-wrapper">
-            <div class="overlay-working">
-                <div class="overlay-content">
-                    <h2>We are working here</h2>
-                    <p>Just send your submission by email</p>
-                </div>
-            </div>
-            <form id="applicationForm" novalidate>
-                <div class="picture-to-upload" id="pictureBox">
-                    <input id="photo" class="file-input" type="file" name="photo" accept="image/*" required>
-                    <img class="img-preview" src="images/aura-scouting-logo.png" alt="Preview" />
-                    <span class="upload-main-text" id="uploadText">Take a Pic</span>
-                </div>
-                <input class="text" id="name" type="text" name="name" placeholder="Name*" required>
-                <input class="text" id="email" type="email" name="email" placeholder="Email*" required>
-                <input class="text" id="height" type="text" name="height" placeholder="Height*" required>
-                <input class="text" id="cellphone" type="text" name="cellphone" placeholder="Cell Phone">
-                <button type="submit">SUBMIT</button>
-            </form>
-        </div>
-    </section>
+    <!-- Model Submission Section -->
+    <?php require_once './templates/form.php' ?>
 
     <!-- Contact Section -->
      <section id="contact">
@@ -265,7 +237,7 @@
                 background-color:#fff;color:#000;font-weight:600;font-size:14px;
                 cursor:pointer;">OK</button>
     </div>
-    
+
     <script>
         window.addEventListener('load', () => {
             if (!localStorage.getItem('cookieAccepted')) {
@@ -279,8 +251,6 @@
         });
     </script>
 
-
-    <!-- Footer -->
     <footer>
         &copy; 2025 Aura Scouting. All rights reserved.
         <p lang="zh" class="chinese-text">
