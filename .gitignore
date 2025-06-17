@@ -1,0 +1,13 @@
+# macOS specific files
+.DS_Store
+
+# Composer artifacts
+composer.phar
+
+# Application specific configuration and environment files
+config.php
+/vendor/
+/logs/
+/tmp_uploads/
+installer
+# .env # If you ever use a .env file for environment variables

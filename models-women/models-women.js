@@ -3,7 +3,7 @@ const models = [
   {
     name: "Alicia Vallecilla",
     gender: "Mujeres",
-    photo:  "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia_polas_1.webp",
+    photo:  "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia vallecilla__1.webp",
     height: "5'8-1,75m",
     measurements: "B 30-75cm W 23-59cm H 35-89cm",
     hair: "Black",
@@ -33,16 +33,14 @@ const models = [
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_21.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_22.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_23.webp",
-        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia_polas_1.webp",
-        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia_polas_2.webp",
-        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia_polas_3.webp",
-        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia_polas_4.webp",
-
-
+        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia vallecilla__1.webp",
+        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia vallecilla__2.webp",
+        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia vallecilla__3.webp",
+        "../models/mujeres/alicia vallecilla - new icon/polas/full/alicia vallecilla__4.webp",
     ]
 
   },
- 
+
   // === Model: Audrey Coleman ===
   {
     name: "Audrey Coleman",
@@ -74,9 +72,7 @@ const models = [
       "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_01.mp4",
       "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_02.mp4",
       "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video03.mp4",
-    
     ]
-
   },
 
   // === Model: Diana Zenteno ===
@@ -119,9 +115,9 @@ const models = [
       "../models/mujeres/diana zenteno - new icon/polas/mini/diana zenteno__6.webp",
       "../models/mujeres/diana zenteno - new icon/polas/mini/diana zenteno__7.webp",
     ]
-    
+
   },
-  
+
   // === Model: Felicitas Ceres ===
   {
     name: "Felicitas",
@@ -167,7 +163,7 @@ const models = [
         "../models/mujeres/felicitas - ceres/polas/mini/42-felicitas-codesal-abril-2025-ceres.webp",
         "../models/mujeres/felicitas - ceres/polas/mini/50-felicitas-codesal-abril-2025-ceres.webp",
     ]
-    
+
   },
 
   // === Model: Fema Seimandi ===
@@ -210,9 +206,9 @@ const models = [
       "../models/mujeres/fema seimandi - new icon/polas/mini/fema seimandi__3.webp",
       "../models/mujeres/fema seimandi - new icon/polas/mini/fema seimandi__4.webp",
     ]
-    
+
   },
-  
+
   // === Model: Frida - Ceres ===
   {
     name: "Frida",
@@ -238,7 +234,7 @@ const models = [
         "../models/mujeres/frida - ceres/polas/mini/55-frida-richter-digitals-25-ceres.webp",
         "../models/mujeres/frida - ceres/polas/mini/62-frida-richter-digitals-25-ceres.webp",
     ]
-    
+
   },
   // === Model: Genesis - New Icon  ===
   {
@@ -278,9 +274,9 @@ const models = [
       "../models/mujeres/genesis  - new icon/polas/mini/genesis polas4.webp",
       "../models/mujeres/genesis  - new icon/polas/mini/genesis polas5.webp",
       "../models/mujeres/genesis  - new icon/polas/mini/genesis polas6.webp",
-      "../models/mujeres/genesis  - new icon/polas/mini/genesis polas7.webp", 
+      "../models/mujeres/genesis  - new icon/polas/mini/genesis polas7.webp",
     ]
-    
+
   },
 
   // === Model: Kass - New Icon ===
@@ -315,7 +311,7 @@ const models = [
       "../models/mujeres/kass - new icon/book/mini/kass__8.webp",
       "../models/mujeres/kass - new icon/book/mini/kass__9.webp",
     ]
-    
+
   },
 
   // === Model: Luciana Imoberdof - ARG ===
@@ -352,9 +348,9 @@ const models = [
     "../models/mujeres/luciana imoberdof -arg/polas/mini/luciana 06.webp",
     "../models/mujeres/luciana imoberdof -arg/polas/mini/luciana 07.webp",
     "../models/mujeres/luciana imoberdof -arg/polas/mini/luciana 10.webp",
-    
+
     ]
-    
+
   },
 
   // === Model: Chloe - New Icon ===
@@ -403,9 +399,9 @@ const models = [
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola3.webp",
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola4.webp",
     ]
-    
+
   },
-  
+
     // === Model: eva - gh ===
   {
     name: "Eva",
