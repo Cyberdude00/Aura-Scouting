@@ -1,5 +1,5 @@
 const models = [
- 
+
   // === Model: Mariana Arias ===
   {
     name: "Mariana Arias",
@@ -39,12 +39,12 @@ const models = [
       "../models/mujeres/mariana arias - new icon/book/full/mariana_arias_book_26.webp",
       "../models/mujeres/mariana arias - new icon/book/full/mariana_arias_book_27.webp",
       "../models/mujeres/mariana arias - new icon/book/full/mariana_arias_book_28.webp",
-      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_1.webp",
-      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_2.webp",
-      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_3.webp",
-      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_4.webp",
-      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_5.webp",
-      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_6.webp",
+      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_1.jpg",
+      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_2.jpg",
+      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_3.jpg",
+      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_4.jpg",
+      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_5.jpg",
+      "../models/mujeres/mariana arias - new icon/polas/full/mariana_arias_polas_6.jpg",
       "../models/mujeres/mariana arias - new icon/videos/mariana_arias_video_1.mp4",
       "../models/mujeres/mariana arias - new icon/videos/mariana_arias_video_2.mp4",
       "../models/mujeres/mariana arias - new icon/videos/mariana_arias_video_3.mp4",
