@@ -143,27 +143,56 @@ function openPolasSection(model, modelIdx) {
   if (model.eyes) measuresHTML += `<span class="measure-label">Eyes</span><span class="measure-value">${model.eyes}</span>`;
   if (model.hair) measuresHTML += `<span class="measure-label">Hair</span><span class="measure-value">${model.hair}</span>`;
   if (model.shoe) measuresHTML += `<span class="measure-label">Shoe size</span><span class="measure-value">${model.shoe}</span>`;
-  measuresHTML += `<button class="download-book-btn" style="margin-left:16px;padding:6px 15px;font-size:0.95rem;background:#1c1e1f;color:#fff;border:1px solid #ff0000;border-radius:7px;cursor:pointer">Download book</button>`;
+  if (model.download) measuresHTML += `<button id="download-book-btn" class="download-book-btn" style="margin-left:16px;padding:6px 15px;font-size:0.95rem;background:#1c1e1f;color:#fff;border:1px solid #ff0000;border-radius:7px;cursor:pointer">Download book</button>`;
   measures.innerHTML = measuresHTML;
 
-  setTimeout(() => {
+  // This is the correct place to attach the listener for dynamically added elements
+  document.getElementById('download-book-btn').addEventListener('click', downloadPortfolioZip);
+
+  async function downloadPortfolioZip() {
     const btn = document.querySelector(".download-book-btn");
-    if (btn) {
-      btn.onclick = () => {
-        const bookFiles = (model.portfolio ?? []).filter(x => typeof x === 'string' && x.trim().length > 0 && !isVideo(x));
-        if (!bookFiles.length) return alert("No hay fotos en este book.");
-        bookFiles.forEach(url => {
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = url.split('/').pop();
-          link.target = "_blank";
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        });
-      };
+    const fileUrl = model.download; // Still used to construct the ZIP file name/path
+    // Extract the filename for saveAs, assuming the URL ends with the filename
+    const urlParts = fileUrl.split('/');
+    const fileName = urlParts[urlParts.length - 1]; // e.g., "my-portfolio.zip"
+
+    // Guard against missing folderName
+    if (!fileUrl) {
+      alert("Could not download. Please contact Aura Scouting.");
+      return;
     }
-  }, 0);
+
+    btn.textContent = 'Preparing download...';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(fileUrl);
+
+      if (!response.ok) {
+        // More specific error messages for better user feedback
+        if (response.status === 404) {
+          throw new Error("The requested book was not found.");
+        } else if (response.status >= 500) {
+          throw new Error("Server error during download. Please try again.");
+        } else {
+          throw new Error("Failed to download the book due to a network issue.");
+        }
+      }
+
+      const blob = await response.blob(); // Get the response as a Blob
+      // Use FileSaver.js to prompt the user to save the Blob as a .zip file
+      saveAs(blob, fileName);
+
+    } catch (error) {
+      alert(`Failed to download the book. Please try again later or report it.`);
+    } finally {
+      // Always reset the button state
+      if (btn) {
+        btn.textContent = 'Download book';
+        btn.disabled = false;
+      }
+    }
+  }
 
   currentGallery = (model.portfolio ?? []).filter(x => typeof x === 'string' && x.trim().length > 0);
 
