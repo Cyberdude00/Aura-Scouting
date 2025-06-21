@@ -1,0 +1,24 @@
+<?php
+  // This file contains sensitive SMTP configuration details.
+  // Ensure it is properly secured and not publicly accessible.
+
+  // SMTP Configuration for sending emails
+  define('SMTP_HOST', 'smtp.gmail.com'); // e.g., 'smtp.gmail.com' for Gmail, 'smtp-mail.outlook.com' for Outlook
+  define('SMTP_USERNAME', 'example@mail.com'); // Your full email address for authentication
+  define('SMTP_PASSWORD', 'password/appPassword'); // Your email password or app-specific password
+  define('SMTP_PORT', 587);         // Common ports: 587 (TLS), 465 (SSL)
+  define('SMTP_ENCRYPTION', 'tls'); // Use 'ssl' for port 465, 'tls' for port 587
+  // Sender Email and Name (This is the email address and name that will appear as the sender of the email)
+  define('SENDER_EMAIL', 'example@mail.com'); // The designated mail sender
+  define('SENDER_NAME', 'Aura Scouting'); // The name displayed as the sender
+  // Add a recipient (our own contact email)
+  define('RECEIVER_EMAIL','example@mail.com'); // Should add designed email support
+  define('RECEIVER_NAME','Aura Scouting Support');
+  // Configuration Constants
+  // IMPORTANT: Ensure this directory is writable by your web server and NOT publicly accessible.
+  define('ALLOWED_IMAGE_TYPES', ['image/jpeg', 'image/png', 'image/gif']);
+  define('UPLOAD_TEMP_DIR', __DIR__ . '/tmp_uploads/'); // Ensure this is NOT publicly accessible
+  define('EMAIL_ERROR_LOG_FILE', __DIR__ . '/logs/email_errors.log'); // Ensure this is NOT publicly accessible
+  define('MAX_UPLOAD_FILE_SIZE', 10 * 1024 * 1024); // This results in 10MB
+
+?>
