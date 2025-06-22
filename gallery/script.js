@@ -147,8 +147,9 @@ function openPolasSection(model, modelIdx) {
   measures.innerHTML = measuresHTML;
 
   // This is the correct place to attach the listener for dynamically added elements
-  document.getElementById('download-book-btn').addEventListener('click', downloadPortfolioZip);
-
+  if (model.download) {
+    document.getElementById('download-book-btn').addEventListener('click', downloadPortfolioZip);
+  }
   async function downloadPortfolioZip() {
     const btn = document.querySelector(".download-book-btn");
     const fileUrl = model.download; // Still used to construct the ZIP file name/path
@@ -193,6 +194,7 @@ function openPolasSection(model, modelIdx) {
       }
     }
   }
+}
 
   currentGallery = (model.portfolio ?? []).filter(x => typeof x === 'string' && x.trim().length > 0);
 
@@ -221,7 +223,6 @@ function openPolasSection(model, modelIdx) {
 
   section.style.display = "flex";
   setTimeout(() => section.classList.add('show'), 10);
-}
 
 function closePolasSection() {
   const section = document.getElementById("polasSection");
