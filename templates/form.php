@@ -6,9 +6,9 @@
 
   <div class="contact-form-wrapper">
     <?php if (!empty($message)): ?>
-    <div class="message-box <?php echo $messageType; ?>">
-      <?php echo htmlspecialchars($message); ?>
-    </div>
+      <div class="message-box <?php echo $messageType; ?>">
+        <?php echo htmlspecialchars($message); ?>
+      </div>
     <?php endif; ?>
 
     <form id="emailForm" action="process/send_email.php" method="POST" enctype="multipart/form-data">

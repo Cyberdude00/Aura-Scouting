@@ -8,6 +8,7 @@ composer.phar
 config.php
 /vendor/
 /logs/
-/tmp_uploads/ # As discussed in previous convo for temporary uploads
+/tmp_uploads/
 installer
+/gallery/models/
 # .env # If you ever use a .env file for environment variables

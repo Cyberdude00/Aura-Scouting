@@ -7,9 +7,10 @@
   --font-main: "IBM Plex Mono", monospace;
 }
 
+/* ===== BASE ===== */
 html,
 body {
-  background: #181818 no-repeat center center fixed;
+  background: var(--bg-dark) no-repeat center center fixed;
   background-size: cover;
   color: var(--text);
   font-family: var(--font-main);
@@ -17,45 +18,42 @@ body {
   margin: 0;
   min-height: 100vh;
 }
-
-a {
-  color: var(--red);
-  text-decoration: none;
+.body--img-viewer-open {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100vw;
 }
-a:hover {
-  text-decoration: underline;
+.text-center {
+  text-align: center;
+}
+.muted {
+  color: var(--muted);
 }
 
+/* ===== HEADER ===== */
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1650px;
   margin: 0 auto;
-  padding: 36px 4vw 10px 4vw;
-}
-.logo-wrap {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
+  padding: 36px 4vw 10px;
 }
 .logo-img {
   height: 130px;
-  width: auto;
   max-width: 320px;
+  width: auto;
 }
 .header-title {
-  flex: 1 1 auto;
+  flex: 1;
   text-align: center;
   font-size: 2rem;
-  font-weight: 4000;
+  font-weight: 700;
   letter-spacing: 2px;
   color: var(--text);
   opacity: 0.92;
 }
 .header-contacts {
-  flex: 0 0 auto;
-  text-align: right;
   min-width: 180px;
   margin-left: 2vw;
   display: flex;
@@ -72,7 +70,7 @@ a:hover {
 .mail-link {
   color: var(--red);
   font-size: 1.07rem;
-  margin: 2px 0 0 0;
+  margin: 2px 0 0;
   font-weight: 400;
   word-break: break-all;
   transition: color 0.18s;
@@ -81,9 +79,10 @@ a:hover {
   color: #ad0000;
 }
 
+/* ===== GRID DE CARDS ===== */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   padding: 36px 4vw 60px;
   max-width: 1400px;
@@ -92,43 +91,58 @@ a:hover {
 }
 .card {
   background: var(--bg-slot);
-  border-radius: 6px;
+  border-radius: 16px;
   box-shadow: 0 2px 12px #0002;
-  overflow: hidden;
-  transition: box-shadow 0.16s;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 280px;
   border: none;
   cursor: pointer;
+  transition: box-shadow 0.16s;
+  overflow: hidden;
+  padding: 0;
+}
+.card img,
+.card video {
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: block;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: #232323;
+  margin: 0;
+  transition: filter 0.21s;
 }
 .card img {
-  width: 100%;
-  display: block;
   object-fit: cover;
-  aspect-ratio: 3 / 4;
-  border-bottom: 1.5px solid #262626;
   filter: grayscale(14%) brightness(1.02);
-  transition: filter 0.21s;
-  background: var(--bg-slot);
-  border-radius: 6px;
+  background: none;
+}
+.card video {
+  object-fit: contain;
+  filter: grayscale(8%) brightness(1.01);
 }
 .card-body {
-  padding: 11px 0 11px 0;
+  padding: 15px 0;
   text-align: center;
   letter-spacing: 0.5px;
   font-size: 1.05rem;
   font-weight: 200;
   color: var(--muted);
+  background: none;
+  border-radius: 0 0 16px 16px;
+  margin: 0;
+  border: none;
 }
 .card:hover {
-  box-shadow: 0 8px 32px #0003;
+  box-shadow: 0 8px 38px #0004;
 }
-.card:hover img {
-  filter: grayscale(0%) brightness(1.07);
+.card:hover img,
+.card:hover video {
+  filter: grayscale(0%) brightness(1.08);
 }
-/* ---- SLOT VACÍO TOTALMENTE TRANSPARENTE ---- */
 .card.empty {
   background: transparent !important;
   border: none !important;
@@ -136,48 +150,7 @@ a:hover {
   cursor: default;
 }
 
-@media (max-width: 1200px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 850px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .header-title {
-    font-size: 1rem;
-  }
-  .logo-img {
-    height: 75px;
-  }
-}
-@media (max-width: 580px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    padding: 15px 2vw 22px;
-  }
-  .card {
-    max-width: 100vw;
-  }
-  .logo-img {
-    height: 50px;
-  }
-  .header-title {
-    font-size: 0.98rem;
-  }
-  .header-inner {
-    padding: 13px 1vw 4px 1vw;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .header-contacts {
-    font-size: 0.93rem;
-    min-width: 100px;
-  }
-}
-
-/* ---- POLAS MODAL ---- */
+/* ===== POLAS MODAL & GALERÍA ===== */
 .polas-section {
   display: none;
   position: fixed;
@@ -205,44 +178,16 @@ a:hover {
 .polas-inner {
   width: 100%;
   max-width: 970px;
-  margin: 48px auto 38px auto;
-  padding: 32px 10px 30px 10px;
+  margin: 48px auto 38px;
+  padding: 32px 10px 30px;
   background: rgba(0, 0, 0, 0.23);
-  border-radius: 12px;
+  border-radius: 18px;
   box-shadow: 0 10px 60px #000a;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-}
-@media (max-width: 600px) {
-  .polas-inner {
-    margin: 8vw 0 5vw 0;
-    padding: 9vw 3vw;
-  }
-}
-.close-polas {
-  position: absolute;
-  top: 19px;
-  right: 32px;
-  font-size: 3rem;
-  color: var(--red);
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.14s, transform 0.18s;
-  line-height: 1;
-}
-.close-polas:hover,
-.close-polas:active,
-.close-polas:focus {
-  color: var(--red);
-  background: none;
-  outline: none;
-  box-shadow: none;
-  transform: scale(1.18);
 }
 .polas-header {
   display: flex;
@@ -251,11 +196,11 @@ a:hover {
   margin-bottom: 26px;
 }
 .polas-name {
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 2.5px;
-  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
   color: var(--red);
   text-shadow: 0 2px 20px #0006;
   line-height: 1.07;
@@ -265,28 +210,22 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 22px;
-  font-size: 1.23rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 .measure-label {
   color: var(--red);
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 4px 0 8px;
 }
 .measure-value {
   color: #fff;
   margin-right: 10px;
 }
-@media (max-width: 500px) {
-  .polas-name {
-    font-size: 2rem;
-  }
-  .polas-measures {
-    font-size: 0.99rem;
-  }
-}
+
+/* MINIATURAS POLAS */
 .polas-gallery {
   width: 100%;
   display: grid;
@@ -294,19 +233,35 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin-bottom: 37px;
 }
-.polas-gallery img {
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
+.pola-pic {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #232323;
   box-shadow: 0 2px 10px #0002;
+  aspect-ratio: 3/4;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: box-shadow 0.18s;
 }
-.polas-gallery img:hover {
+.pola-pic img,
+.pola-pic video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  background: #232323;
+}
+.pola-pic img:hover,
+.pola-pic video:hover {
   box-shadow: 0 8px 36px #0007;
   z-index: 2;
 }
 
+/* ===== INSTAGRAM MINI GALERÍA ===== */
 .instagram-section {
   width: 100%;
   margin-top: 10px;
@@ -327,7 +282,7 @@ a:hover {
 }
 .insta-gallery img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 1px 8px #0004;
   cursor: pointer;
@@ -337,7 +292,7 @@ a:hover {
   box-shadow: 0 8px 24px #0005;
 }
 
-/* ---- VIEWER ---- */
+/* ===== VISOR DE IMAGEN GRANDE ===== */
 .img-viewer-modal {
   display: none;
   position: fixed;
@@ -351,17 +306,44 @@ a:hover {
   align-items: center;
   flex-direction: column;
   animation: fadeIn 0.2s;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .img-viewer-img {
   max-width: 86vw;
   max-height: 82vh;
   margin: 0 auto;
   box-shadow: 0 8px 40px #0006;
-  border-radius: 12px;
-  animation: imgPop 0.18s;
+  border-radius: 16px;
   background: #232323;
   object-fit: contain;
-  transition: filter 0.22s;
+  transition: filter 0.22s, opacity 0.14s;
+  animation: imgPop 0.18s;
+  font-size: 0 !important;
+  color: transparent !important;
+  text-indent: -9999px !important;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-viewer-img img,
+.img-viewer-img video {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 16px;
+  object-fit: contain !important;
+  background: #181818;
+  margin: auto;
+  display: block;
 }
 @keyframes imgPop {
   from {
@@ -373,29 +355,6 @@ a:hover {
     opacity: 1;
   }
 }
-.img-viewer-close {
-  position: absolute;
-  top: 2.5vh;
-  right: 3vw;
-  color: var(--red);
-  font-size: 2.2rem;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 222;
-  transition: color 0.13s, transform 0.18s;
-  outline: none;
-  background: none;
-  border: none;
-}
-.img-viewer-close:hover,
-.img-viewer-close:active,
-.img-viewer-close:focus {
-  color: var(--red);
-  background: none;
-  outline: none;
-  box-shadow: none;
-  transform: scale(1.18);
-}
 .img-viewer-nav {
   position: absolute;
   top: 50%;
@@ -405,7 +364,6 @@ a:hover {
   background: none;
   border-radius: 50%;
   cursor: pointer;
-  user-select: none;
   transition: transform 0.18s, color 0.17s;
   outline: none;
 }
@@ -425,9 +383,128 @@ a:hover {
   transform: scale(1.18);
 }
 
+/* ===== BOTÓN CERRAR POLAS & VISOR ===== */
+.close-polas,
+.img-viewer-close {
+  position: absolute;
+  right: 32px;
+  font-size: 3rem;
+  color: var(--red);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: color 0.14s, transform 0.18s;
+  outline: none;
+  z-index: 222;
+}
+.close-polas {
+  top: -5px;
+}
+.img-viewer-close {
+  top: 5px;
+}
+.close-polas:hover,
+.close-polas:active,
+.close-polas:focus,
+.img-viewer-close:hover,
+.img-viewer-close:active,
+.img-viewer-close:focus {
+  color: var(--red);
+  background: none;
+  outline: none;
+  box-shadow: none;
+  transform: scale(1.18);
+}
+
+/* ===== UTILS ===== */
+.img-blur {
+  filter: blur(12px) grayscale(25%);
+  transition: filter 0.5s, opacity 0.4s;
+  opacity: 0.8;
+}
+.img-sharp {
+  filter: blur(0) grayscale(0%);
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+.mobile-only {
+  display: none !important;
+}
+.desktop-only {
+  display: flex !important;
+}
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 850px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .header-title {
+    font-size: 1rem;
+  }
+  .logo-img {
+    height: 75px;
+  }
+}
+@media (max-width: 580px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 15px 2vw 22px;
+  }
+  .card {
+    max-width: 100vw;
+  }
+  .logo-img {
+    height: 50px;
+  }
+  .header-title {
+    font-size: 0.98rem;
+  }
+  .header-inner {
+    padding: 13px 1vw 4px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .header-contacts {
+    font-size: 0.93rem;
+    min-width: 100px;
+  }
+  .mobile-only {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .polas-inner {
+    margin: 8vw 0 5vw;
+    padding: 10vw 5vw;
+  }
+  .close-polas {
+    top: 5px;
+    right: 8px;
+    font-size: 2.2rem;
+  }
+  .img-viewer-close {
+    top: calc(7px + 9vw);
+    right: 9px;
+    font-size: 2.2rem;
+  }
+}
+
+/* ===== FOOTER ===== */
 footer {
   margin-top: 10vh;
-  padding: 5vh 0 2vh 0;
+  padding: 5vh 0 2vh;
   text-align: center;
   background: transparent;
 }

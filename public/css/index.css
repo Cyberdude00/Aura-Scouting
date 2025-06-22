@@ -6,6 +6,9 @@
   --color-light: #1c1e1f;
   --color-accent: #ff0000;
   --color-text-light: #ffffff;
+  --background-auras-america: url('../images/aura-scouting-america.webp');
+  --background-auras-europe: url('../images/aura-scouting-europa.webp');
+  --background-auras-argentina: url('../images/aura-scouting-argentina.webp');
 }
 
 /* ======================== GLOBAL / RESET ======================== */
@@ -65,7 +68,7 @@ nav a:focus {
 /* ======================== HERO SECTION ======================== */
 #our-name {
   height: 100vh;
-  background: url("../images/aura-scouting-america.webp") center/cover no-repeat;
+  background: var(--background-auras-america) center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,7 +110,7 @@ nav a:focus {
 /* ======================== ABOUT SECTION ======================== */
 #about {
   background-color: var(--color-light);
-  background-image: url("../images/aura-scouting-europa.webp");
+  background-image: var(--background-auras-europe);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -180,7 +183,7 @@ nav a:focus {
 
 /* ======================== WHY CHOOSE US SECTION ======================== */
 #why {
-  background-image: url("../images/aura-scouting-argentina.webp");
+  background-image: var(--background-auras-argentina);
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -193,6 +196,128 @@ nav a:focus {
   padding: 40px;
   line-height: 1.8;
   max-width: 900px;
+}
+
+/* ======================== MODEL SUBMISSION ======================== */
+#model-submission {
+  position: relative; /* for overlay */
+  padding: 60px 0 40px 0;
+  background: #111;
+  z-index: 2;
+}
+
+#model-submission h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.contact-form-wrapper {
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--color-dark);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+  padding: 36px 25px 32px 25px;
+  color: var(--color-text-light);
+  font-family: var(--font-main);
+  position: relative;
+}
+
+#applicationForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.picture-to-upload {
+  width: 100%;
+  height: 220px;
+  margin: 0 0 1.3rem 0;
+  cursor: pointer;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: var(--font-main);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.3s;
+  border: 2px dashed var(--color-accent);
+}
+.picture-to-upload:hover {
+  background: #222;
+}
+.picture-to-upload input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.img-preview {
+  max-width: 98%;
+  max-height: 98%;
+  display: none;
+}
+.picture-to-upload.previewing .img-preview {
+  display: block;
+}
+.picture-to-upload.previewing .upload-main-text {
+  display: none;
+}
+.upload-main-text {
+  color: #fff;
+  font-family: var(--font-main);
+  pointer-events: none;
+  user-select: none;
+}
+.upload-main-text:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input.text {
+  border: none;
+  border-bottom: 2px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-text-light);
+  padding: 14px 0;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  outline: none;
+  transition: border-color 0.3s;
+}
+input.text::placeholder {
+  color: #ccc;
+}
+input.text.error-placeholder {
+  border-bottom-color: #ff3131;
+  color: #ff3131;
+}
+button[type="submit"] {
+  padding: 13px 0;
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-main);
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 7px;
+}
+button[type="submit"]:hover {
+  background: var(--color-accent);
+  color: #fff;
 }
 
 /* ======================== CONTACT SECTION (EMAILS) ======================== */
@@ -233,6 +358,13 @@ footer {
   font-size: 0.9rem;
   position: relative;
 }
+.chinese-text {
+  font-size: 12px;
+  margin-top: 8px;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: center;
+}
 
 /* ======================== MEDIA QUERIES ======================== */
 @media (max-width: 700px) {
@@ -240,20 +372,70 @@ footer {
     padding-left: 0 !important;
   }
 }
-
 @media (max-width: 480px) {
   body #services div,
   body #how div {
     padding: 10px;
   }
-
   #services,
   #how {
     flex-direction: column;
   }
-  
   .contact-form-wrapper {
     margin: 32px auto 48px auto;
     padding: 24px 8px 24px 8px;
   }
+}
+#cookieBanner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 480px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 16px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+#cookieBanner p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+#cookieBanner a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#cookieBanner button {
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#cookieBanner button:hover {
+  background-color: #f0f0f0;
+}
+
+.chinese-text {
+  font-family: var(--font-main);
+  font-weight: 200;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 8px;
 }
