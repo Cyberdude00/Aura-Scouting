@@ -54,7 +54,7 @@ const models = [
     hair: "Brown",
     eyes: "Brown",
     shoe: "8/42",
-    download: "../modelshombres/adan - new icon/book/adan-full-material.zip",
+    download: "../models/hombres/adan - new icon/adan-full-material.zip",
     portfolio: [
       "../models/hombres/adan - new icon/book/full/adan book_01.webp",
       "../models/hombres/adan - new icon/book/full/adan book_02.webp",
