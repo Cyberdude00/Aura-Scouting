@@ -5,19 +5,32 @@ function replaceVariante(path, newVar) {
 function isVideo(file) {
   return /\.(mp4|webm|mov)$/i.test(file);
 }
-
 // ========== MEDIA LOADER ==========
 function mediaLoader(mediaPath, alt = "", loading = "lazy", tier = "auto", bigView = false) {
   if (isVideo(mediaPath)) {
     const video = document.createElement("video");
     video.src = mediaPath;
     video.loop = true;
-    video.playsInline = true;
+    video.playsInline = true; // Necesario para Safari/iOS
     video.className = "video-thumb";
-    video.oncanplay = () => video.play();
+    
+    // Set default states (autoplay+muted for thumbs)
     if (bigView) {
       video.controls = true;
-      video.muted = false;
+      video.muted = false; // Solo sin mute en bigView, si quieres sonido (el usuario debe dar play)
+      video.autoplay = false; // Quita autoplay para evitar errores en Safari al tener sonido
+    } else {
+      video.controls = false;
+      video.muted = true;   // Obligatorio para autoplay cross-browser
+      video.autoplay = true;
+      // Truco: forzar play para Safari (puede tirar error pero lo ignoramos)
+      video.oncanplay = () => {
+        video.play().catch(() => {});
+      };
+    }
+
+    // Estilos
+    if (bigView) {
       video.style.width = "auto";
       video.style.height = "auto";
       video.style.maxWidth = "90vw";
@@ -27,8 +40,6 @@ function mediaLoader(mediaPath, alt = "", loading = "lazy", tier = "auto", bigVi
       video.style.borderRadius = "14px";
       video.style.display = "block";
     } else {
-      video.controls = false;
-      video.muted = true;
       video.style.width = "100%";
       video.style.height = "auto";
       video.style.maxHeight = "250px";
@@ -41,6 +52,7 @@ function mediaLoader(mediaPath, alt = "", loading = "lazy", tier = "auto", bigVi
   }
   return progressiveImageLoader(mediaPath, alt, loading, tier, bigView);
 }
+
 
 // ========== PROGRESSIVE IMAGE LOADER (solo retorna <img>) ==========
 function progressiveImageLoader(imgPath, alt = "", loading = "lazy", tier = "auto", bigView = false) {
@@ -148,7 +160,7 @@ function openPolasSection(model, modelIdx) {
   }
   measures.innerHTML = measuresHTML;
 
-  // BotÃ³n de descarga
+  // Bot¨®n de descarga
   if (model.download) {
     document.getElementById('download-book-btn').addEventListener('click', async function downloadPortfolioZip() {
       const btn = document.querySelector(".download-book-btn");
@@ -179,7 +191,7 @@ function openPolasSection(model, modelIdx) {
     });
   }
 
-  // GalerÃ­a de polas
+  // Galer¨ªa de polas
   currentGallery = (model.portfolio ?? []).filter(x => typeof x === 'string' && x.trim().length > 0);
 
   gallery.innerHTML = "";
@@ -202,7 +214,7 @@ function openPolasSection(model, modelIdx) {
     instaImg.src = url;
     instaImg.alt = "Instagram";
     instaImg.loading = "lazy";
-    // Solo si tienes una funciÃ³n para el visor de Instagram, si no, quita la lÃ­nea de abajo.
+    // Solo si tienes una funci¨®n para el visor de Instagram, si no, quita la l¨ªnea de abajo.
     // instaImg.addEventListener('click', () => openImgViewerIG(idx));
     insta.appendChild(instaImg);
   });

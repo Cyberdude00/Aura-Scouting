@@ -54,11 +54,11 @@ const models = [
       "../models/hombres/adan - new icon/polas/full/polas_adan19.webp",
       //"../models/hombres/adan - new icon/polas/full/polas_adan20.webp",
       "../models/hombres/adan - new icon/polas/full/adan_polas21.webp",
-      "../models/hombres/adan - new icon/videos/video_adan_1.mp4",
-      "../models/hombres/adan - new icon/videos/video_adan_2.mp4",
-      "../models/hombres/adan - new icon/videos/video_adan_3.mp4",
-      "../models/hombres/adan - new icon/videos/video_adan_4.mp4",
-      "../models/hombres/adan - new icon/videos/video_adan_5.mp4",
+      //"../models/hombres/adan - new icon/videos/video_adan_1.mp4",
+      //"../models/hombres/adan - new icon/videos/video_adan_2.mp4",
+      // "../models/hombres/adan - new icon/videos/video_adan_3.mp4",
+      //"../models/hombres/adan - new icon/videos/video_adan_4.mp4",
+      //"../models/hombres/adan - new icon/videos/video_adan_5.mp4",
 
       
     ],
@@ -321,9 +321,9 @@ const models = [
       "../models/hombres/salih topcouglu/book/mini/salih book29.webp",
       "../models/hombres/salih topcouglu/book/mini/salih book30.webp",
       "../models/hombres/salih topcouglu/polas/mini/salih polas.webp",
-      "../models/hombres/salih topcouglu/videos/salih_video1.mov",
-      "../models/hombres/salih topcouglu/videos/salih_video2.MP4",
-      "../models/hombres/salih topcouglu/videos/salih_video3.MP4",
+      //"../models/hombres/salih topcouglu/videos/salih_video1.mov",
+      //"../models/hombres/salih topcouglu/videos/salih_video2.MP4",
+      //"../models/hombres/salih topcouglu/videos/salih_video3.MP4",
     ],
     instagram: []
   }, // === End Model ===
@@ -363,10 +363,8 @@ const models = [
       "../models/hombres/santiago poggi - ceres/book/mini/61-santiago-poggi-2025-ceres.webp",
       "../models/hombres/santiago poggi - ceres/book/mini/30-santiago-poggi-2025-ceres.webp",
       "../models/hombres/santiago poggi - ceres/book/mini/95-santiago-poggi-2025-ceres.webp",
-      "../models/hombres/santiago poggi - ceres/videos/santiago_poggi2.mp4",
-      "../models/hombres/santiago poggi - ceres/videos/santiago_poggi3.mp4",
-      "../models/hombres/santiago poggi - ceres/videos/santiago_poggi4.mp4",
-      "../models/hombres/santiago poggi - ceres/videos/santiago_poggi5.mp4",
+      //"../models/hombres/santiago poggi - ceres/videos/santiago_poggi4.mp4",
+      //"../models/hombres/santiago poggi - ceres/videos/santiago_poggi5.mp4",
     ],
     instagram: []
   }, // === End Model ===
@@ -408,10 +406,9 @@ const models = [
       "../models/hombres/santiago zezular - ceres/book/mini/24-santiago-zezular-main-book-ceres.webp",
       "../models/hombres/santiago zezular - ceres/polas/mini/1-santiago-zezular-compolaroid-ceres.webp",
       "../models/hombres/santiago zezular - ceres/polas/mini/2-santiago-zezular-compolaroid-ceres.webp",
-      "../models/hombres/santiago zezular - ceres/videos/santiago_zezular1.mp4",
-      "../models/hombres/santiago zezular - ceres/videos/santiago_zezular2.mp4",
-      "../models/hombres/santiago zezular - ceres/videos/santiago_zezular3.mp4",
-      "../models/hombres/santiago zezular - ceres/videos/santiago_zezular4.mp4",
+      //"../models/hombres/santiago zezular - ceres/videos/santiago_zezular1.mp4",
+      //"../models/hombres/santiago zezular - ceres/videos/santiago_zezular2.mp4",
+
     ],
     instagram: []
   }, // === End Model ===

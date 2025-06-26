@@ -70,6 +70,7 @@
       "url": "https://www.aurascouting.com",
       "logo": "https://www.aurascouting.com/favicon/mini-logo.png",
       "sameAs": ["https://www.instagram.com/aurascouting"]
+      ]
     }
     </script>
     <!-- Favicon -->

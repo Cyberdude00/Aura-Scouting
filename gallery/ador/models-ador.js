@@ -29,9 +29,9 @@ const models = [
       "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__1.webp",
       "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__2.webp",
       "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__3.webp",
-      "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__4.webp",
-
-    
+      "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_01.mp4",
+      "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_02.mp4",
+      "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video03.mp4",
     ]
 
   },

@@ -13,7 +13,6 @@ const models = [
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_01.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_02.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_03.webp",
-        "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_04.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_05.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_06.webp",
         "../models/mujeres/alicia vallecilla - new icon/book/mini/alicia book_07.webp",
@@ -69,14 +68,14 @@ const models = [
       "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__1.webp",
       "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__2.webp",
       "../models/mujeres/audrey coleman - new icon/polas/mini/audrey coleman__3.webp",
-      "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_01.mp4",
-      "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_02.mp4",
-      "../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video03.mp4",
+      //"../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_01.mp4",
+      //"../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video_02.mp4",
+      //"../models/mujeres/audrey coleman - new icon/videos/audrey_coleman_video03.mp4",
     ]
   },
 
   // === Model: Diana Zenteno ===
-  {
+ /* {
     name: "Diana Zenteno",
     gender: "Mujeres",
     photo: "../models/mujeres/diana zenteno - new icon/polas/mini/diana zenteno__1.webp",
@@ -117,7 +116,7 @@ const models = [
     ]
 
   },
-
+*/
   // === Model: Felicitas Ceres ===
   {
     name: "Felicitas",
@@ -469,9 +468,8 @@ const models = [
       "../models/mujeres/eva - gh/polas/full/eva digitals 08.webp",
       "../models/mujeres/eva - gh/polas/full/eva digitals 09.webp",
       "../models/mujeres/eva - gh/polas/full/eva digitals 10.webp",
-      "../models/mujeres/eva - gh/videos/eva_video1.mp4",
-      "../models/mujeres/eva - gh/videos/eva_video2.mp4",
-      "../models/mujeres/eva - gh/videos/eva_video3.mp4",
+      //"../models/mujeres/eva - gh/videos/eva_video1.mp4",
+      //"../models/mujeres/eva - gh/videos/eva_video2.mp4",
     ]
   },
 ];
