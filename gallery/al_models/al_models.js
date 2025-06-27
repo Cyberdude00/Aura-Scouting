@@ -70,7 +70,6 @@ const models = [
       "../models/mujeres/eva - gh/polas/full/eva digitals 10.webp",
       "../models/mujeres/eva - gh/videos/eva_video1.mp4",
       "../models/mujeres/eva - gh/videos/eva_video2.mp4",
-      "../models/mujeres/eva - gh/videos/eva_video3.mp4",
     ]
     
   },
