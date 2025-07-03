@@ -1,0 +1,17 @@
+{
+  "name": "your-vendor/php-email-sender",
+  "description": "PHP project to send emails via a form using PHPMailer.",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gerardo Quintero",
+      "email": "gera.quinteros@hotmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}

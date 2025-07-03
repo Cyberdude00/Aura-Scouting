@@ -1,0 +1,141 @@
+/* Custom Styles for the Email Form */
+/* ======================== MODEL SUBMISSION ======================== */
+#model-submission {
+  position: relative; /* for overlay */
+  padding: 60px 0 40px 0;
+  background: #111;
+  z-index: 2;
+}
+
+#model-submission h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.contact-form-wrapper {
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--color-dark);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+  padding: 36px 25px 32px 25px;
+  color: var(--color-text-light);
+  font-family: var(--font-main);
+  position: relative;
+}
+
+#emailForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.picture-to-upload {
+  width: 100%;
+  height: 220px;
+  margin: 0 0 1.3rem 0;
+  cursor: pointer;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: var(--font-main);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.3s;
+  border: 2px dashed var(--color-accent);
+}
+.picture-to-upload:hover {
+  background: #222;
+}
+.picture-to-upload input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.img-preview {
+  max-width: 98%;
+  max-height: 98%;
+  display: none;
+}
+
+input.text {
+  border: none;
+  border-bottom: 2px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-text-light);
+  padding: 14px 0;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input.text::placeholder {
+  color: #ccc;
+}
+input.text.error-placeholder {
+  border-bottom-color: #ff3131;
+  color: #ff3131;
+}
+button[type="submit"] {
+  padding: 13px 0;
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-main);
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 7px;
+}
+button[type="submit"]:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.message-box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Simple spinner animation */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

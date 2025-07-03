@@ -1,0 +1,25 @@
+# macOS specific files
+.DS_Store
+
+# Windows system files
+desktop.ini
+Thumbs.db
+
+# Composer artifacts
+composer.phar
+
+# Application specific configuration and environment files
+config.php
+/vendor/
+/logs/
+/tmp_uploads/
+installer
+/gallery/models/
+# .env # If you ever use a .env file for environment variables
+
+# BFG reports y archivos temporales
+.bfg-report/
+
+# Logs y archivos temporales comunes
+*.log
+*.tmp

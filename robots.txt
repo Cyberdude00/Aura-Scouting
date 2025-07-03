@@ -1,0 +1,41 @@
+# ===============================
+# Aura Scouting - robots.txt
+# Última actualización: Junio 2025
+# ===============================
+
+# === Indexación global permitida ===
+User-agent: *
+Allow: /
+
+# === Bloquear páginas internas no deseadas en buscadores ===
+Disallow: /gallery/
+
+# === Reglas específicas para bots de Asia ===
+
+# Naver (Corea)
+User-agent: Yeti
+Allow: /
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+Clean-param: ref /  # evitar parámetros duplicados que afecten SEO
+
+# Yandex (Rusia)
+User-agent: Yandex
+Allow: /
+Host: www.aurascouting.com
+
+# Seznam (Rep. Checa)
+User-agent: SeznamBot
+Allow: /
+
+# === Sitemap ===
+Sitemap: https://www.aurascouting.com/sitemap.xml
+
+# === Notas adicionales ===
+# Este archivo mejora la indexación internacional y reduce duplicados.
+# Asegúrate de tener configurados correctamente:
+# - hreflang (si haces versión china)
+# - meta tags <meta name="robots" ...>
+# - canonical URLs

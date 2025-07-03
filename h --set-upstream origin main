@@ -1,0 +1,122 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex b29c3..3fba3 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,64 +1,10 @@[m
+ # Aca va el codigo terminado de la pagina de aura Scouting[m
+ # Primer parte c-va el SEO y la estructura Basica[m
+ [m
+[31m-<html lang="en">[m
+[32m+[m[32m-Ya esta lsito en local se ve todo correctamente[m
+ [m
+[31m-<head>[m
+[31m-  <!-- Charset and Responsive -->[m
+[31m-  <meta charset="UTF-8">[m
+[31m-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">[m
+[31m-  <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m#ERRORES[m[41m [m
+ [m
+[31m-  <!-- SEO -->[m
+[31m-  <title>Aura Scouting | International Model Agency</title>[m
+[31m-  <meta name="description" content="Aura Scouting is a modeling agency offering a global platform to connect and promote talent from around the world. We connect models and agencies internationally.">[m
+[31m-  <meta name="keywords" content="modeling agency, model scouting, international models, model promotion, talent agency">[m
+[31m-  <meta name="robots" content="index, follow">[m
+[32m+[m[32mAl subirlo a servidor no se ve la imagen de fodo y en la ultima seccion de contacto se pierde el formato[m
+ [m
+[31m-  <!-- Canonical URL -->[m
+[31m-  <link rel="canonical" href="https://www.aurascouting.com/" />[m
+[31m-[m
+[31m-  <!-- Meta Verifications -->[m
+[31m-  <meta name="google-site-verification" content="uNugEzyCV6dv_8FfAjxyGEDG00xmW9EOHM565Vxfpyk" />[m
+[31m-  <meta name="naver-site-verification" content="69a69ec196155004557c51f983ffef70b5d864ec" />[m
+[31m-  <meta name="baidu-site-verification" content="dQ8vW9gIHq" />[m
+[31m-  <meta name="wechat-site-verification" content="d7c8e7bd89ed99ab7cd4e1f5ff14b9d0" />[m
+[31m-  <meta name="seznam-site-verification" content="v7b9-82hg-jf9i-82dh-93yg-81db-x95w" />[m
+[31m-[m
+[31m-  <!-- Open Graph -->[m
+[31m-  <meta property="og:title" content="Aura Scouting | International Model Agency">[m
+[31m-  <meta property="og:description" content="Aura Scouting is a modeling agency offering a global platform to connect and promote talent from around the world. We connect models and agencies internationally.">[m
+[31m-  <meta property="og:image" content="https://www.aurascouting.com/images/mini-logo.png">[m
+[31m-  <meta property="og:url" content="https://www.aurascouting.com/">[m
+[31m-  <meta property="og:type" content="website">[m
+[31m-[m
+[31m-  <!-- Twitter Cards -->[m
+[31m-  <meta name="twitter:card" content="summary_large_image">[m
+[31m-  <meta name="twitter:title" content="Aura Scouting | International Model Agency">[m
+[31m-  <meta name="twitter:description" content="Aura Scouting is a modeling agency offering a global platform to connect and promote talent from around the world. We connect models and agencies internationally.">[m
+[31m-  <meta name="twitter:image" content="https://www.aurascouting.com/images/mini-logo.png">[m
+[31m-  <meta name="twitter:url" content="https://www.aurascouting.com/">[m
+[31m-[m
+[31m-  <!-- Schema.org Structured Data -->[m
+[31m-  <script type="application/ld+json">[m
+[31m-  {[m
+[31m-    "@context": "https://schema.org",[m
+[31m-    "@type": "Organization",[m
+[31m-    "name": "Aura Scouting",[m
+[31m-    "url": "https://www.aurascouting.com",[m
+[31m-    "logo": "https://www.aurascouting.com/images/mini-logo.png",[m
+[31m-    "sameAs": [[m
+[31m-      "https://www.instagram.com/aurascouting"[m
+[31m-    ][m
+[31m-  }[m
+[31m-  </script>[m
+[31m-[m
+[31m-  <!-- Favicon -->[m
+[31m-  <link rel="icon" href="/images/mini-logo.ico" type="image/x-icon">[m
+[31m-[m
+[31m-  <!-- Fonts and Styles -->[m
+[31m-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[31m-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">[m
+[31m-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css" media="all" onload="this.media='all'">[m
+[31m-  <link rel="stylesheet" href="styles.css" media="all" onload="this.media='all'">[m
+[31m-</head>[m
+[32m+[m[32mMejoras a Futuro agregar un contact form[m
+\ No newline at end of file[m
+[1mdiff --git a/images/aura-scouting-america.jpg b/images/aura-scouting-america.jpg[m
+[1mdeleted file mode 100644[m
+[1mindex 3fc6e..00000[m
+Binary files a/images/aura-scouting-america.jpg and /dev/null differ
+[1mdiff --git a/images/aura-scouting-america2.webp b/images/aura-scouting-america2.webp[m
+[1mdeleted file mode 100644[m
+[1mindex 1488f..00000[m
+Binary files a/images/aura-scouting-america2.webp and /dev/null differ
+[1mdiff --git a/index.html b/index.html[m
+[1mindex d84e9..fd3f6 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -57,11 +57,10 @@[m
+ [m
+     <!-- Favicon -->[m
+     <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">[m
+[31m-<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">[m
+[31m-<link rel="shortcut icon" href="/favicon/favicon.ico">[m
+[31m-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">[m
+[31m-<link rel="manifest" href="/favicon/site.webmanifest">[m
+[31m-[m
+[32m+[m[32m    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">[m
+[32m+[m[32m    <link rel="shortcut icon" href="/favicon/favicon.ico">[m
+[32m+[m[32m    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">[m
+[32m+[m[32m    <link rel="manifest" href="/favicon/site.webmanifest">[m
+ [m
+     <!-- Fonts & Styles -->[m
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[36m@@ -76,9 +75,19 @@[m
+     <link rel="preload" as="image" href="images/aura-scouting-logo.png">[m
+     <link rel="preload" as="image" href="images/aura-scouting-europa.webp">[m
+ [m
+[32m+[m[32m    <!-- Google Analytics 4 (gtag.js) -->[m
+[32m+[m[32m    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6TLTFWH0W"></script>[m
+[32m+[m[32m    <script>[m
+[32m+[m[32m        window.dataLayer = window.dataLayer || [];[m
+[32m+[m[32m        function gtag() { dataLayer.push(arguments); }[m
+[32m+[m[32m        gtag('js', new Date());[m
+ [m
+[32m+[m[32m        gtag('config', 'G-L6TLTFWH0W');[m
+[32m+[m[32m    </script>[m
+[32m+[m[32m    <!-- End Google Analytics -->[m
+ </head>[m
+ [m
+[32m+[m
+ <body>[m
+     [m
+     <!-- Navigation -->[m

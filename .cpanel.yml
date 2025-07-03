@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home3/aurascou/public_html
+    - /bin/cp -R * $DEPLOYPATH
