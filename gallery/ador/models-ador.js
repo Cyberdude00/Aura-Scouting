@@ -320,8 +320,6 @@ const models = [
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola3.webp",
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola4.webp",
       "../models/mujeres/chloe - new icon/videos/chloe_video (1).mov",
-      "../models/mujeres/chloe - new icon/videos/chloe_video (2).mov",
-      "../models/mujeres/chloe - new icon/videos/chloe_video (1).mov",
       "../models/mujeres/chloe - new icon/videos/chloe_video (2).mov"
     ]
     

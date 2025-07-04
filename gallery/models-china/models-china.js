@@ -77,7 +77,7 @@ const models = [
   },
 
   // === Model: Diana Zenteno ===
-  {
+  /* {
     name: "Diana Zenteno",
     gender: "Mujeres",
     photo: "../models/mujeres/diana zenteno - new icon/polas/mini/diana zenteno__1.webp",
@@ -118,6 +118,7 @@ const models = [
     ]
 
   },
+  */
 
   // === Model: Felicitas Ceres ===
   {
@@ -356,7 +357,7 @@ const models = [
   },
 
   // === Model: Chloe - New Icon ===
-  {
+  /* {
     name: "Chloe",
     gender: "Mujeres",
     photo: "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola1.webp",
@@ -403,9 +404,8 @@ const models = [
       "../models/mujeres/chloe - new icon/videos/chloe_video (1).mov",
       "../models/mujeres/chloe - new icon/videos/chloe_video (2).mov"
     ]
-
   },
-
+*/
     // === Model: eva - gh ===
   {
     name: "Eva",

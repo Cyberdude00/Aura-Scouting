@@ -49,18 +49,70 @@ const models = [
       "../models/mujeres/lina/book/full/lina_book (37).jpg",
       "../models/mujeres/lina/book/full/lina_book (38).jpg",
       "../models/mujeres/lina/polas/full/lina_polas (1).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (3).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (3).WEBP",
+      "../models/mujeres/lina/polas/full/lina_polas (2).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (3).WEBP",
       "../models/mujeres/lina/polas/full/lina_polas (4).WEBP",
       "../models/mujeres/lina/polas/full/lina_polas (5).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (6).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (7).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (8).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (9).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (10).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (11).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (6).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (7).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (8).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (9).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (10).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (11).WEBP",
       "../models/mujeres/lina/polas/full/lina_polas (12).WEBP",
-      "../models/mujeres/lina/polas/full/lina_polas (13).WEBP",
+      //"../models/mujeres/lina/polas/full/lina_polas (13).WEBP",
+    ]
+  },
+  
+  // === Model: Mariana Arias ===
+  {
+    name: "Mariana Arias",
+    gender: "Mujeres",
+    photo: "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_1.jpg",
+    height: "5'9-1,75m",
+    measurements: "B 29.5-75.5cm W 24-60cm H 34.5-88cm",
+    hair: "Brown",
+    eyes: "Brown",
+    shoe: "7-38",
+    download: "../models/mujeres/mariana-arias-new-icon/mariana-arias-book.zip",
+    portfolio: [
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_1.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_2.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_3.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_4.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_5.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_6.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_7.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_8.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_9.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_10.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_11.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_12.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_13.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_14.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_15.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_16.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_17.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_18.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_19.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_20.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_21.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_22.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_23.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_24.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_25.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_26.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_27.webp",
+      "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_28.webp",
+      "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_1.jpg",
+      "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_2.jpg",
+      "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_3.jpg",
+      "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_4.jpg",
+      "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_5.jpg",
+     // "../models/mujeres/mariana-arias-new-icon/polas/full/mariana_arias_polas_6.jpg",
+      //"../models/mujeres/mariana-arias-new-icon/videos/mariana_arias_video_1.mp4",
+      //"../models/mujeres/mariana-arias-new-icon/videos/mariana_arias_video_2.mp4",
+      //"../models/mujeres/mariana-arias-new-icon/videos/mariana_arias_video_3.mp4",
     ]
   },
 
@@ -339,6 +391,7 @@ const models = [
       "../models/mujeres/genesis  - new icon/polas/mini/genesis polas5.webp",
       "../models/mujeres/genesis  - new icon/polas/mini/genesis polas6.webp",
       "../models/mujeres/genesis  - new icon/polas/mini/genesis polas7.webp",
+      //"../models/mujeres/genesis  - new icon/videos/GENESIS-VIDEO-1.mp4",
     ]
 
   },
@@ -416,7 +469,7 @@ const models = [
     ]
 
   },
-
+ 
   // === Model: Chloe - New Icon ===
   {
     name: "Chloe",
@@ -462,8 +515,8 @@ const models = [
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola2.webp",
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola3.webp",
       "../models/mujeres/chloe - new icon/polas/mini/chloe bell pola4.webp",
-      "../models/mujeres/chloe - new icon/videos/chloe_video (1).mov",
-      "../models/mujeres/chloe - new icon/videos/chloe_video (2).mov"
+      //"../models/mujeres/chloe - new icon/videos/chloe_video (1).mov",
+      //"../models/mujeres/chloe - new icon/videos/chloe_video (2).mov"
     ]
 
   },

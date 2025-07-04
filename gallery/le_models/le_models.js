@@ -10,7 +10,7 @@ const models = [
     hair: "Brown",
     eyes: "Brown",
     shoe: "7-38",
-    download: "../models/mujeres/mariana-arias-new-icon/mariana-arias-book.zip",
+    download: "../models/mujeres/mariana-arias-new-icon/mariana_arias.zip",
     portfolio: [
       "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_1.webp",
       "../models/mujeres/mariana-arias-new-icon/book/full/mariana_arias_book_2.webp",
