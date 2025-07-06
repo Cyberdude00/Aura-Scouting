@@ -44,12 +44,9 @@ const models = [
         "../models/mujeres/felicitas - ceres/polas/mini/37-felicitas-codesal-abril-2025-ceres.webp",
         "../models/mujeres/felicitas - ceres/polas/mini/42-felicitas-codesal-abril-2025-ceres.webp",
         "../models/mujeres/felicitas - ceres/polas/mini/50-felicitas-codesal-abril-2025-ceres.webp",
-        "../models/mujeres/felicitas - ceres/polas/mini/50-felicitas-codesal-abril-2025-ceres.webp",
         "../models/mujeres/felicitas - ceres/videos/felicitas_codesal_video_1.mp4",
         "../models/mujeres/felicitas - ceres/videos/felicitas_codesal_video_2.mp4",
         "../models/mujeres/felicitas - ceres/videos/felicitas_codesal_video_3.mp4",
-
-    ]
-    
+    ]  
   },
 ]
