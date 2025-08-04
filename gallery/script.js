@@ -1,6 +1,6 @@
 // ========== UTILS ==========
 function replaceVariante(path, newVar) {
-  return path.replace(/\/(mini|medium|full)\//, "/" + newVar + "/");
+  return path.replace(/\/(mini|full)\//, "/" + newVar + "/");
 }
 function isVideo(file) {
   return /\.(mp4|webm|mov)$/i.test(file);
@@ -227,7 +227,7 @@ function openImgViewer(idx) {
     url,
     "Big Preview",
     "eager",
-    window.innerWidth < 600 ? "medium" : "full",
+    window.innerWidth < 600 ? "mini" : "full",
     true
   );
   if (wrapper) wrapper.appendChild(media);
