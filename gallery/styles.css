@@ -118,7 +118,6 @@ body {
 .card img {
   object-fit: cover;
   filter: grayscale(14%) brightness(1.02);
-  background: none;
 }
 .card video {
   object-fit: contain;
@@ -131,7 +130,6 @@ body {
   font-size: 1.05rem;
   font-weight: 200;
   color: var(--muted);
-  background: none;
   border-radius: 0 0 16px 16px;
   margin: 0;
   border: none;
@@ -144,7 +142,6 @@ body {
   filter: grayscale(0%) brightness(1.08);
 }
 .card.empty {
-  background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   cursor: default;
@@ -236,7 +233,6 @@ body {
 .pola-pic {
   border-radius: 12px;
   overflow: hidden;
-  background: #232323;
   box-shadow: 0 2px 10px #0002;
   aspect-ratio: 3/4;
   width: 100%;
@@ -253,7 +249,6 @@ body {
   object-fit: cover;
   border-radius: 0;
   display: block;
-  background: #232323;
 }
 .pola-pic img:hover,
 .pola-pic video:hover {
@@ -301,8 +296,9 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--bg-dark);
-  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25); /* oscuro pero traslúcido */
+  backdrop-filter: blur(12px); /* 🪄 efecto glass */
+  -webkit-backdrop-filter: blur(12px); /* por si acaso en Safari */  justify-content: center;
   align-items: center;
   flex-direction: column;
   animation: fadeIn 0.2s;
@@ -323,7 +319,6 @@ body {
   margin: 0 auto;
   box-shadow: 0 8px 40px #0006;
   border-radius: 16px;
-  background: #232323;
   object-fit: contain;
   transition: filter 0.22s, opacity 0.14s;
   animation: imgPop 0.18s;
@@ -341,7 +336,6 @@ body {
   max-height: 80vh;
   border-radius: 16px;
   object-fit: contain !important;
-  background: #181818;
   margin: auto;
   display: block;
 }
@@ -361,7 +355,6 @@ body {
   font-size: 3.3rem;
   color: var(--red);
   padding: 0.1em 0.2em;
-  background: none;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.18s, color 0.17s;
@@ -513,4 +506,30 @@ footer {
   font-size: 1.07rem;
   letter-spacing: 1.3px;
   font-weight: 300;
+}
+
+/* ===== BOTON DE CAMBIO DE MEDIDAS ===== */
+
+.toggle-unit-btn {
+  padding: 7px 20px;
+  font-size: 0.93rem;
+  background: #1c1e1f;
+  color: var(--muted);
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+  font-family: var(--font-main);
+}
+.toggle-unit-btn:hover {
+  color: #fff;
+  border-color: #fff;
+  background: #2a2a2a;
+}
+.unit-toggle-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
 }

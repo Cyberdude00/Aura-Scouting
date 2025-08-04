@@ -42,7 +42,6 @@
         <img src="/public/images/aura-scouting-logo.png" loading="lazy" alt="Aura Scouting Logo" class="logo-img">
       </div>
       <div class="header-title">Crew Selection</div>
-      <!-- DIRECTORS solo en PC, arriba a la derecha -->
       <div class="header-contacts desktop-only">
         <div class="contacts-title">DIRECTORS</div>
         <a href="mailto:emma@aurascouting.com" class="mail-link">emma@aurascouting.com</a>
@@ -50,15 +49,19 @@
       </div>
     </div>
   </header>
+
   <main class="grid-container" id="modelGrid"></main>
 
-  <!-- SECCIÓN POLAS EN PÁGINA COMPLETA -->
+  <!-- SECCION POLAS -->
   <section id="polasSection" class="polas-section">
     <div class="polas-inner">
       <button class="close-polas" id="closePolasBtn" title="Close">&times;</button>
       <div class="polas-header">
         <div id="polasName" class="polas-name"></div>
         <div class="polas-measures" id="polasMeasures"></div>
+        <div class="unit-toggle-wrap">
+          <button id="toggleUnitBtn" class="toggle-unit-btn">Switch to ft/in</button>
+        </div>
       </div>
       <div class="polas-gallery" id="polasGallery"></div>
       <div class="instagram-section">
@@ -67,7 +70,8 @@
       </div>
     </div>
   </section>
-    <!-- VISOR DE IMAGEN/VIDEO GRANDE -->
+
+  <!-- VISOR DE IMAGEN/VIDEO -->
   <div id="imgViewer" class="img-viewer-modal">
     <span class="img-viewer-close" tabindex="0">&times;</span>
     <div class="img-viewer-img"></div>
@@ -75,21 +79,21 @@
     <div class="img-viewer-nav img-viewer-next" tabindex="0">&#10095;</div>
   </div>
 
-  <!-- DIRECTORS solo para móvil, abajo y centrado -->
   <div class="header-contacts mobile-only">
     <div class="contacts-title">DIRECTORS</div>
     <a href="mailto:emma@aurascouting.com" class="mail-link">emma@aurascouting.com</a>
     <a href="mailto:magali@aurascouting.com" class="mail-link">magali@aurascouting.com</a>
-  </div>  
+  </div>
 
   <footer id="footer">
     <div class="footer-content">
       © 2025 Aura Scouting. All rights reserved.
     </div>
   </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-  <script src="crew.js"></script><!-- poner el mismo nombre que el .js -->
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="crew.js"></script>
   <script src="../script.js"></script>
 </body>
-
 </html>

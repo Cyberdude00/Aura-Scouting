@@ -57,9 +57,10 @@ function mediaLoader(mediaPath, alt = "", loading = "lazy", tier = "auto", bigVi
 // ========== PROGRESSIVE IMAGE LOADER (solo retorna <img>) ==========
 function progressiveImageLoader(imgPath, alt = "", loading = "lazy", tier = "auto", bigView = false) {
   const mini = replaceVariante(imgPath, "mini");
+  const medium = replaceVariante(imgPath, "medium");
   const full = replaceVariante(imgPath, "full");
   let maxTier = "full";
-  if (tier === "auto") maxTier = window.innerWidth < 600 ? "mini" : "full";
+  if (tier === "auto") maxTier = window.innerWidth < 600 ? "medium" : "full";
   else maxTier = tier;
 
   const img = document.createElement("img");
@@ -82,17 +83,32 @@ function progressiveImageLoader(imgPath, alt = "", loading = "lazy", tier = "aut
 
   img.onload = function onMiniLoaded() {
     img.onload = null;
-    if (maxTier === "full") {
-      const fullImg = new window.Image();
-      fullImg.src = full;
-      fullImg.onload = function () {
-        img.src = full;
+    if (maxTier === "medium" || maxTier === "full") {
+      const medImg = new window.Image();
+      medImg.src = medium;
+      medImg.onload = function () {
+        img.src = medium;
         img.classList.remove("img-blur");
         img.classList.add("img-sharp");
+        if (maxTier === "full") {
+          const fullImg = new window.Image();
+          fullImg.src = full;
+          fullImg.onload = function () {
+            img.src = full;
+          };
+        }
       };
-    } else {
-      img.classList.remove("img-blur");
-      img.classList.add("img-sharp");
+      medImg.onerror = function () {
+        if (maxTier === "full") {
+          const fullImg = new window.Image();
+          fullImg.src = full;
+          fullImg.onload = function () {
+            img.src = full;
+            img.classList.remove("img-blur");
+            img.classList.add("img-sharp");
+          };
+        }
+      };
     }
   };
 
@@ -287,7 +303,7 @@ function preloadAdjacentImages(gallery, idx) {
       const url = gallery[i];
       if (!isVideo(url)) {
         const img = new window.Image();
-        img.src = replaceVariante(url, "full");
+        img.src = replaceVariante(url, window.innerWidth < 600 ? "medium" : "full");
       }
     }
   });
