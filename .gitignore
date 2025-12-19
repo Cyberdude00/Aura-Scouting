@@ -1,25 +1,33 @@
-# macOS specific files
+# OS
 .DS_Store
-
-# Windows system files
 desktop.ini
 Thumbs.db
 
-# Composer artifacts
-composer.phar
-
-# Application specific configuration and environment files
-config.php
-/vendor/
-/logs/
-/tmp_uploads/
-installer
-/gallery/models/
-# .env # If you ever use a .env file for environment variables
-
-# BFG reports y archivos temporales
-.bfg-report/
-
-# Logs y archivos temporales comunes
+# Logs / temp
 *.log
 *.tmp
+
+# Vendor / config
+/vendor/
+config.php
+composer.phar
+/logs/
+/tmp_uploads/
+installer/
+
+# MEDIA PESADA (CLAVE)
+gallery/
+books/
+models/
+boys/
+girls/
+*.jpg
+*.png
+*.webp
+*.mp4
+
+# Tools / basura local
+.bfg-report/
+.gemini/
+.docker/
+.Neo4jDesktop2/

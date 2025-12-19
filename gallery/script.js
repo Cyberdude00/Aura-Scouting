@@ -1,6 +1,6 @@
 // ========== UTILS ==========
 function replaceVariante(path, newVar) {
-  return path.replace(/\/(mini|medium|full)\//, "/" + newVar + "/");
+  return path.replace(/\/(mini|full)\//, "/" + newVar + "/");
 }
 function isVideo(file) {
   return /\.(mp4|webm|mov)$/i.test(file);
@@ -57,10 +57,9 @@ function mediaLoader(mediaPath, alt = "", loading = "lazy", tier = "auto", bigVi
 // ========== PROGRESSIVE IMAGE LOADER (solo retorna <img>) ==========
 function progressiveImageLoader(imgPath, alt = "", loading = "lazy", tier = "auto", bigView = false) {
   const mini = replaceVariante(imgPath, "mini");
-  const medium = replaceVariante(imgPath, "medium");
   const full = replaceVariante(imgPath, "full");
   let maxTier = "full";
-  if (tier === "auto") maxTier = window.innerWidth < 600 ? "medium" : "full";
+  if (tier === "auto") maxTier = window.innerWidth < 600 ? "mini" : "full";
   else maxTier = tier;
 
   const img = document.createElement("img");
@@ -83,32 +82,17 @@ function progressiveImageLoader(imgPath, alt = "", loading = "lazy", tier = "aut
 
   img.onload = function onMiniLoaded() {
     img.onload = null;
-    if (maxTier === "medium" || maxTier === "full") {
-      const medImg = new window.Image();
-      medImg.src = medium;
-      medImg.onload = function () {
-        img.src = medium;
+    if (maxTier === "full") {
+      const fullImg = new window.Image();
+      fullImg.src = full;
+      fullImg.onload = function () {
+        img.src = full;
         img.classList.remove("img-blur");
         img.classList.add("img-sharp");
-        if (maxTier === "full") {
-          const fullImg = new window.Image();
-          fullImg.src = full;
-          fullImg.onload = function () {
-            img.src = full;
-          };
-        }
       };
-      medImg.onerror = function () {
-        if (maxTier === "full") {
-          const fullImg = new window.Image();
-          fullImg.src = full;
-          fullImg.onload = function () {
-            img.src = full;
-            img.classList.remove("img-blur");
-            img.classList.add("img-sharp");
-          };
-        }
-      };
+    } else {
+      img.classList.remove("img-blur");
+      img.classList.add("img-sharp");
     }
   };
 
@@ -160,7 +144,7 @@ function openPolasSection(model, modelIdx) {
   }
   measures.innerHTML = measuresHTML;
 
-  // Bot¨®n de descarga
+  // Botï¿½ï¿½n de descarga
   if (model.download) {
     document.getElementById('download-book-btn').addEventListener('click', async function downloadPortfolioZip() {
       const btn = document.querySelector(".download-book-btn");
@@ -191,7 +175,7 @@ function openPolasSection(model, modelIdx) {
     });
   }
 
-  // Galer¨ªa de polas
+  // Galerï¿½ï¿½a de polas
   currentGallery = (model.portfolio ?? []).filter(x => typeof x === 'string' && x.trim().length > 0);
 
   gallery.innerHTML = "";
@@ -214,7 +198,7 @@ function openPolasSection(model, modelIdx) {
     instaImg.src = url;
     instaImg.alt = "Instagram";
     instaImg.loading = "lazy";
-    // Solo si tienes una funci¨®n para el visor de Instagram, si no, quita la l¨ªnea de abajo.
+    // Solo si tienes una funciï¿½ï¿½n para el visor de Instagram, si no, quita la lï¿½ï¿½nea de abajo.
     // instaImg.addEventListener('click', () => openImgViewerIG(idx));
     insta.appendChild(instaImg);
   });
@@ -243,7 +227,7 @@ function openImgViewer(idx) {
     url,
     "Big Preview",
     "eager",
-    window.innerWidth < 600 ? "medium" : "full",
+    window.innerWidth < 600 ? "mini" : "full",
     true
   );
   if (wrapper) wrapper.appendChild(media);
@@ -303,13 +287,13 @@ function preloadAdjacentImages(gallery, idx) {
       const url = gallery[i];
       if (!isVideo(url)) {
         const img = new window.Image();
-        img.src = replaceVariante(url, window.innerWidth < 600 ? "medium" : "full");
+        img.src = replaceVariante(url, "full");
       }
     }
   });
 }
 
-// ========== ESCAPE KEY ==========
+/// ========== ESCAPE KEY ==========
 window.addEventListener('keydown', function (e) {
   const viewer = document.getElementById('imgViewer');
   const polasSection = document.getElementById('polasSection');
@@ -324,8 +308,86 @@ window.addEventListener('keydown', function (e) {
   }
 });
 
-// ========== INIT ==========
+// ========== INIT y BotÃ³n de medidas ==========
+let isMetric = true;
+
+function convertUnits(text, isHeight = false) {
+  if (!text) return "";
+
+  if (!isMetric) {
+    // ---------- A SISTEMA IMPERIAL ----------
+    if (isHeight) {
+      // metros â†’ pies/pulgadas
+      text = text.replace(/(\d+(?:\.\d+)?)m\b/gi, (_, val) => {
+        const meters = parseFloat(val);
+        const totalInches = meters * 100 / 2.54;
+        const feet = Math.floor(totalInches / 12);
+        const inches = Math.round(totalInches % 12);
+        return `${feet}'${inches}"`;
+      });
+
+      // cm â†’ pies/pulgadas
+      text = text.replace(/(\d+(?:\.\d+)?)cm\b/gi, (_, val) => {
+        const cm = parseFloat(val);
+        const totalInches = cm / 2.54;
+        const feet = Math.floor(totalInches / 12);
+        const inches = Math.round(totalInches % 12);
+        return `${feet}'${inches}"`;
+      });
+    } else {
+      // medidas corporales â†’ solo pulgadas con decimal
+      text = text.replace(/(\d+(?:\.\d+)?)cm\b/gi, (_, val) => {
+        const cm = parseFloat(val);
+        const inches = (cm / 2.54).toFixed(1);
+        return `${inches}"`;
+      });
+    }
+
+  } else {
+    // ---------- A SISTEMA MÃ‰TRICO ----------
+
+    // pies y pulgadas â†’ cm
+    text = text.replace(/(\d+)'(\d+)"/g, (_, feet, inches) => {
+      const totalInches = parseInt(feet) * 12 + parseInt(inches);
+      const cm = Math.round(totalInches * 2.54);
+      return `${cm}cm`;
+    });
+
+    // pulgadas solas â†’ cm
+    text = text.replace(/(\d+(?:\.\d+)?)"/g, (_, val) => {
+      const inches = parseFloat(val);
+      const cm = Math.round(inches * 2.54);
+      return `${cm}cm`;
+    });
+  }
+
+  return text;
+}
+
+function toggleUnits() {
+  isMetric = !isMetric;
+  const measures = document.getElementById("polasMeasures");
+  if (!measures) return;
+
+  const spans = measures.querySelectorAll(".measure-value");
+  spans.forEach((span, i) => {
+    const isHeight = i === 0; // solo el primero es altura
+    const isMeasurements = i === 1; // el segundo son medidas corporales
+    if (isHeight || isMeasurements) {
+      span.textContent = convertUnits(span.textContent, isHeight);
+    }
+  });
+
+  const btn = document.getElementById("toggleUnitBtn");
+  if (btn) btn.textContent = isMetric ? "Switch to ft/in" : "Switch to cm/m";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderModels(models); // models debe existir global
   document.getElementById("polasSection").style.display = "none";
+
+  const unitBtn = document.getElementById("toggleUnitBtn");
+  if (unitBtn) {
+    unitBtn.addEventListener("click", toggleUnits);
+  }
 });

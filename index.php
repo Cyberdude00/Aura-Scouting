@@ -145,7 +145,7 @@
     <section id="our-name">
       <img src="./public/images/aura-scouting-logo.png" alt="Aura Scouting Logo" id="our-name-logo" loading="eager">
       <h1 id="our-name-text">
-        We offer models and agencies the opportunity<br>to shine on the global stage.
+        We offer models and agencies the opportunity to shine<br>on the global stage.
       </h1>
     </section>
 

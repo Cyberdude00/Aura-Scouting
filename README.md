@@ -3,13 +3,12 @@
 
 -Ya esta listo en local, todo se ve correctamente
 
-#E RRORES
-
-Se empalma la X en pantsllas pequeñas.
+#ERRORES
+Se empalma la X en pantallas pequeñas.
 El text de directors puede ir en el footer y centrado
 
 # MEJORAS
-
+migrar a hangular
 editar modelos desde front
 verificar baidu
 
