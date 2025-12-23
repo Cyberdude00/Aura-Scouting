@@ -1,6 +1,12 @@
 # Aca va el codigo terminado de la pagina de aura Scouting
 # Primer parte c-va el SEO y la estructura Basica
 
+---------------------
+DECARGAR EL DRIVE CON TODA LA MEDIA
+https://drive.google.com/drive/folders/1x3hRaXH6rcL-2SPK_zD_WntsJhXOb5Ah?usp=sharing
+---------------------
+
+
 -Ya esta listo en local, todo se ve correctamente
 
 #ERRORES
